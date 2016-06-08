@@ -3019,13 +3019,14 @@ a.active {
   outline: none;
 }
 a {
-  color: #e6cb00;
+  color: #004381;
+  font-weight: 900;
 }
 a:hover,
 a:focus,
 a:active,
 a.active {
-  color: #b39e00;
+  color: #00294e;
 }
 h1,
 h2,
