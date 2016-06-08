@@ -20,9 +20,11 @@ d.parent(".dropdown-menu").length&&(d=d.closest("li.dropdown").addClass("active"
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
 $(function() {
+  var $htmlBody = $('html, body'),
+    $navbarToggleVisible = $('.navbar-toggle:visible');
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
+        $htmlBody.stop().animate({
             scrollTop: $($anchor.attr('href')).offset().top - 50
         }, 1000, 'easeOutExpo');
         event.preventDefault();
@@ -35,7 +37,7 @@ $(function() {
 
   // Closes the Responsive Menu on Menu Item Click
   $('.navbar-collapse ul li a').click(function() {
-      $('.navbar-toggle:visible').click();
+      $navbarToggleVisible.click();
   });
   // Offset for Main Navigation
   $('#mainNav').affix({
@@ -43,7 +45,6 @@ $(function() {
       top: 50
     }
   });
-
 
   $.fn.extend({
     animateCss: function (animationName, removeClass) {
@@ -121,13 +122,14 @@ $(function() {
         e.preventDefault();
         $(this).tab("show");
     });
+    /*When clicking on Full hide fail/success boxes */
+    $('#name').focus(function() {
+        $('#success').html('');
+    });
 });
 
 
-/*When clicking on Full hide fail/success boxes */
-$('#name').focus(function() {
-    $('#success').html('');
-});
+
 
 /* jqBootstrapValidation
  * A plugin for automating validation on Twitter Bootstrap formatted forms.

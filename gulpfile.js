@@ -64,6 +64,8 @@ gulp.task('deploy-img', function () {
     .pipe(gulp.dest('./deploy/img'));
 });
 
+gulp.task('deploy', ['build']); /// alias, because I know I'll do both
+
 gulp.task('build', ['less', 'deploy-img', 'uglifyjs-deploy', 'uglifycss-deploy'], function () { /// then copy stuff!
   del.sync(['./deploy/index.html']);
   del.sync(['./deploy/favicon.ico']);
