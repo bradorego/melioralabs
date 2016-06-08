@@ -15,14 +15,14 @@ gulp.task('default', ['less', 'concat-js', 'concat-css', 'serve'], function () {
 
 gulp.task('concat-js', function () {
   del.sync(['./dev/js/all.js']);
-  return gulp.src(['dev/js/jquery.js', 'dev/js/wow.min.js', './dev/js/*.js'])
+  return gulp.src(['dev/js/jquery.js', 'dev/js/wow.min.js', 'dev/js/bootstrap.min.js', './dev/js/*.js'])
     .pipe(concat('all.js'))
     .pipe(gulp.dest('./dev/js/'));
 });
 
 gulp.task('less', function () {
   // del.sync(['./dev/css/creative.css']);
-  return gulp.src('./dev/less/creative.less')
+  return gulp.src('./dev/less/meliora.less')
     .pipe(less())
     .pipe(gulp.dest('./dev/css/'));
 });
