@@ -3268,6 +3268,7 @@ header .intro-text .intro-heading {
 }
 section {
   padding: 50px 0;
+  overflow: hidden;
 }
 section h2.section-heading {
   font-size: 40px;
@@ -3355,10 +3356,11 @@ section h3.section-subheading {
   list-style: none;
   padding: 0;
   position: relative;
+  margin-top: 25px;
 }
 .timeline:before {
   top: 0;
-  bottom: 0;
+  bottom: -200px;
   position: absolute;
   content: "";
   width: 2px;
@@ -3366,74 +3368,79 @@ section h3.section-subheading {
   left: 40px;
   margin-left: -1.5px;
 }
-.timeline > li {
+.timeline .entry {
   margin-bottom: 50px;
   position: relative;
   min-height: 50px;
 }
-.timeline > li:before,
-.timeline > li:after {
+.timeline .entry:before,
+.timeline .entry:after {
   content: " ";
   display: table;
 }
-.timeline > li:after {
+.timeline .entry:after {
   clear: both;
 }
-.timeline > li .timeline-panel {
+.timeline .entry .timeline-panel {
   width: 100%;
   float: right;
   padding: 0 20px 0 100px;
   position: relative;
   text-align: left;
 }
-.timeline > li .timeline-panel:before {
+.timeline .entry .timeline-panel:before {
   border-left-width: 0;
   border-right-width: 15px;
   left: -15px;
   right: auto;
 }
-.timeline > li .timeline-panel:after {
+.timeline .entry .timeline-panel:after {
   border-left-width: 0;
   border-right-width: 14px;
   left: -14px;
   right: auto;
 }
-.timeline > li .timeline-image {
+.timeline .entry .timeline-image {
   left: 0;
   margin-left: 0;
   width: 80px;
   height: 80px;
   position: absolute;
   z-index: 100;
-  background-color: #e6cb00;
+  background-color: #004381;
   color: white;
   border-radius: 100%;
   border: 7px solid #f1f1f1;
   text-align: center;
 }
-.timeline > li .timeline-image h4 {
+.timeline .entry .timeline-image .img-meliora {
+  width: 80%;
+  border-radius: 0;
+  margin: 5px auto;
+}
+.timeline .entry .timeline-image h4 {
   font-size: 10px;
   margin-top: 12px;
   line-height: 14px;
 }
-.timeline > li.timeline-inverted > .timeline-panel {
+.timeline .entry.timeline-inverted > .timeline-panel {
   float: right;
   text-align: left;
   padding: 0 20px 0 100px;
 }
-.timeline > li.timeline-inverted > .timeline-panel:before {
+.timeline .entry.timeline-inverted > .timeline-panel:before {
   border-left-width: 0;
   border-right-width: 15px;
   left: -15px;
   right: auto;
 }
-.timeline > li.timeline-inverted > .timeline-panel:after {
+.timeline .entry.timeline-inverted > .timeline-panel:after {
   border-left-width: 0;
   border-right-width: 14px;
   left: -14px;
   right: auto;
 }
-.timeline > li:last-child {
+.timeline .entry:last-child {
   margin-bottom: 0;
 }
 .timeline .timeline-heading h4 {
@@ -3447,75 +3454,84 @@ section h3.section-subheading {
 .timeline .timeline-body > ul {
   margin-bottom: 0;
 }
+.timeline .entry.final {
+  position: relative;
+}
+.timeline .entry.final .timeline-image {
+  margin-left: 0;
+  left: 0;
+  border-radius: 1000px;
+  width: 100%;
+  padding: 0px 25px 10px;
+  height: auto;
+  position: relative;
+}
+.timeline .entry.final .timeline-image p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 18px;
+  font-style: italic;
+}
+@media (min-width: 768px) {
+  .timeline .entry.final .timeline-image {
+    margin-top: -100px;
+  }
+}
+@media (min-width: 992px) {
+  .timeline .entry.final .timeline-image {
+    margin-top: -50px;
+  }
+}
 @media (min-width: 768px) {
   .timeline:before {
     left: 50%;
   }
-  .timeline > li {
+  .timeline .entry {
     margin-bottom: 100px;
     min-height: 100px;
   }
-  .timeline > li .timeline-panel {
+  .timeline .entry .timeline-panel {
     width: 41%;
     float: left;
     padding: 0 20px 20px 30px;
     text-align: right;
+    top: -25px;
   }
-  .timeline > li .timeline-image {
-    width: 100px;
-    height: 100px;
+  .timeline .entry .timeline-image {
+    width: 150px;
+    height: 150px;
     left: 50%;
-    margin-left: -50px;
+    margin-left: -75px;
   }
-  .timeline > li .timeline-image h4 {
+  .timeline .entry .timeline-image h4 {
     font-size: 13px;
     margin-top: 16px;
     line-height: 18px;
   }
-  .timeline > li.timeline-inverted > .timeline-panel {
+  .timeline .entry.timeline-inverted > .timeline-panel {
     float: right;
     text-align: left;
     padding: 0 30px 20px 20px;
   }
 }
 @media (min-width: 992px) {
-  .timeline > li {
+  .timeline .entry {
     min-height: 150px;
   }
-  .timeline > li .timeline-panel {
+  .timeline .entry .timeline-panel {
     padding: 0 20px 20px;
   }
-  .timeline > li .timeline-image {
+  .timeline .entry .timeline-image {
     width: 150px;
     height: 150px;
     margin-left: -75px;
   }
-  .timeline > li .timeline-image h4 {
+  .timeline .entry .timeline-image h4 {
     font-size: 18px;
     margin-top: 30px;
     line-height: 26px;
   }
-  .timeline > li.timeline-inverted > .timeline-panel {
+  .timeline .entry.timeline-inverted > .timeline-panel {
     padding: 0 20px 20px;
-  }
-}
-@media (min-width: 1200px) {
-  .timeline > li {
-    min-height: 170px;
-  }
-  .timeline > li .timeline-panel {
-    padding: 0 20px 20px 100px;
-  }
-  .timeline > li .timeline-image {
-    width: 170px;
-    height: 170px;
-    margin-left: -85px;
-  }
-  .timeline > li .timeline-image h4 {
-    margin-top: 40px;
-  }
-  .timeline > li.timeline-inverted > .timeline-panel {
-    padding: 0 100px 20px 20px;
   }
 }
 aside.clients {
@@ -3579,13 +3595,6 @@ section#contact .form-control:focus {
   box-shadow: none;
 }
 section#contact ::-webkit-input-placeholder {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #bbbbbb;
-}
-section#contact :-moz-placeholder {
-  /* Firefox 18- */
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -3696,11 +3705,13 @@ ul.social-buttons li a:active {
 }
 ::-moz-selection {
   text-shadow: none;
-  background: #e6cb00;
+  background: #004381;
+  color: white;
 }
 ::selection {
   text-shadow: none;
-  background: #e6cb00;
+  background: #004381;
+  color: white;
 }
 img::selection {
   background: transparent;
@@ -3709,5 +3720,5 @@ img::-moz-selection {
   background: transparent;
 }
 body {
-  webkit-tap-highlight-color: #e6cb00;
+  webkit-tap-highlight-color: #004381;
 }
