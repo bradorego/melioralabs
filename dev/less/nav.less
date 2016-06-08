@@ -11,6 +11,21 @@
   .navbar-header .navbar-brand {
     padding: 10px;
   }
+  .navbar-toggle { /// responsive menu toggle
+    background: @brand-secondary;
+    border-width: 0;
+    .icon-bar {
+      background-color: @brand-primary;
+    }
+    &:focus,
+    &:hover {
+      background: @brand-primary;
+      .icon-bar {
+        background-color: @brand-secondary;
+      }
+    }
+    color: @brand-secondary;
+  }
   .nav {
     > li {
       > a,

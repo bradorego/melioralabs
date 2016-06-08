@@ -10,6 +10,22 @@
 .navbar-default .navbar-header .navbar-brand {
   padding: 10px;
 }
+.navbar-default .navbar-toggle {
+  background: #004381;
+  border-width: 0;
+  color: #004381;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #e6cb00;
+}
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background: #e6cb00;
+}
+.navbar-default .navbar-toggle:focus .icon-bar,
+.navbar-default .navbar-toggle:hover .icon-bar {
+  background-color: #004381;
+}
 .navbar-default .nav > li > a,
 .navbar-default .nav > li > a:focus {
   text-transform: uppercase;
@@ -87,13 +103,8 @@ header .intro-text .intro-lead-in {
   line-height: 22px;
   margin-bottom: 25px;
 }
-header .intro-text .intro-heading {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 50px;
-  line-height: 50px;
-  margin-bottom: 25px;
+header .intro-text p {
+  margin-bottom: 35px;
 }
 @media (min-width: 768px) {
   header .intro-text .intro-lead-in {
