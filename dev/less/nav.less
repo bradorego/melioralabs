@@ -1,0 +1,55 @@
+// nav.less
+
+// Custom Navigation Bar
+
+.navbar-default {
+  background-color: @brand-dark;
+  border-color: @brand-primary;
+  border-bottom-width: 2px;
+  .sans-serif-font;
+  .transition-all;
+  .navbar-header .navbar-brand {
+    padding: 10px;
+  }
+  .nav {
+    > li {
+      > a,
+      > a:focus {
+        .navbar-text();
+        text-align: center;
+        font-size: 16px;
+        &:hover {
+          color: @brand-primary !important;
+          background: transparent !important;
+        }
+      }
+
+      &.active {
+        > a,
+        > a:focus {
+          color: lighten(@brand-primary, 20%);
+          background-color: transparent;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    background-color: transparent;
+    border-color: @brand-primary;
+    .nav > li > a,
+    .nav > li > a:focus {
+      .fade-text(white);
+      &:hover {
+        color: white;
+        opacity: 1;
+      }
+    }
+    &.affix {
+      background-color: @brand-dark;
+      .nav > li > a,
+      .nav > li > a:focus {
+        opacity: 1;
+      }
+    }
+  }
+}

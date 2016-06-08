@@ -1,0 +1,44 @@
+.portfolio-modal {
+  .modal-content {
+    border-radius: 0;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    min-height: 100%;
+    padding: 0px 0 100px;
+    text-align: center;
+    h2 {
+      margin-bottom: 15px;
+      font-size: 3em;
+    }
+    p {
+      margin-bottom: 30px;
+    }
+    p.item-intro {
+      margin: 20px 0 30px;
+      .serif-font;
+      font-style: italic;
+      font-size: 16px;
+    }
+    ul.list-inline {
+      margin-bottom: 30px;
+      margin-top: 0;
+    }
+    img {
+      margin-bottom: 30px;
+    }
+  } /// end .modal-content
+  .close-modal {
+    position: absolute;
+    background-color:transparent;
+    top: 0px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 9999;
+  } /// end .close-modal
+  .modal-backdrop {
+    opacity: 0;
+    display: none;
+  }
+}
