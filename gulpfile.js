@@ -63,10 +63,15 @@ gulp.task('deploy-img', function () {
   return gulp.src('./dev/img/**/*.*')
     .pipe(gulp.dest('./deploy/img'));
 });
+gulp.task('deploy-font', function () {
+  del.sync(['./deploy/fonts']);
+  return gulp.src('./dev/fonts/**/*.*')
+    .pipe(gulp.dest('./deploy/fonts'));
+});
 
 gulp.task('deploy', ['build']); /// alias, because I know I'll do both
 
-gulp.task('build', ['less', 'deploy-img', 'uglifyjs-deploy', 'uglifycss-deploy'], function () { /// then copy stuff!
+gulp.task('build', ['less', 'deploy-img', 'deploy-font', 'uglifyjs-deploy', 'uglifycss-deploy'], function () { /// then copy stuff!
   del.sync(['./deploy/index.html']);
   del.sync(['./deploy/favicon.ico']);
   gulp.src('./dev/favicon.ico')
