@@ -31,8 +31,8 @@ $(function() {
                 data: {
                   api_user: "melioralabs",
                   api_key: "TestWord1",
-                  to: "bradley.orego@gmail.com",
-                  from: "borego@u.rochester.edu",
+                  to: "brad@melioralabs.com",
+                  from: "bradley.orego@gmail.com",
                   subject: "Contact from MelioraLabs",
                   html: "Name: " + name + "<br/>Phone:" + phone + "<br/>Email:" + email + "<br/>Message:<br/>" + message
                 },
