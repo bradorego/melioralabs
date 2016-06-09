@@ -3483,6 +3483,9 @@ ul.social-buttons li a:focus,
 ul.social-buttons li a:active {
   background-color: #e6cb00;
 }
+.portfolio-modal .modal-body {
+  padding: 15px 0px;
+}
 .portfolio-modal .modal-content {
   border-radius: 0;
   background-clip: border-box;
