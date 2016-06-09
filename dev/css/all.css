@@ -3046,10 +3046,10 @@ header {
   text-align: center;
   color: white;
 }
-header::before {
+header::after {
   background-color: #004381;
   background-size: 10%;
-  background-image: url('../img/meliora.png');
+  background-image: url('../img/meliora2.png');
   content: "";
   position: absolute;
   width: 200%;
@@ -3097,6 +3097,17 @@ header .intro-text p {
 .portfolio .portfolio-item {
   margin: 0 0 15px;
   right: 0;
+  display: block;
+  text-decoration: none;
+  color: #222;
+  font-weight: initial;
+}
+.portfolio .portfolio-item:hover {
+  text-decoration: none;
+}
+.portfolio .portfolio-item:hover .portfolio-link .portfolio-hover {
+  opacity: 1;
+  filter: blur(0);
 }
 .portfolio .portfolio-item .portfolio-link {
   display: block;
@@ -3113,9 +3124,6 @@ header .intro-text p {
   transition: all ease 0.5s;
   -webkit-transition: all ease 0.5s;
   -moz-transition: all ease 0.5s;
-}
-.portfolio .portfolio-item .portfolio-link .portfolio-hover:hover {
-  opacity: 1;
 }
 .portfolio .portfolio-item .portfolio-link .portfolio-hover .portfolio-hover-content {
   position: absolute;
@@ -3150,6 +3158,18 @@ header .intro-text p {
   font-style: italic;
   font-size: 16px;
   margin: 0;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+@media (min-width: 768px) {
+  .portfolio .portfolio-item .portfolio-caption {
+    min-height: 150px;
+  }
+}
+@media (min-width: 992px) {
+  .portfolio .portfolio-item .portfolio-caption {
+    min-height: 130px;
+  }
 }
 .portfolio * {
   z-index: 2;
@@ -3357,10 +3377,10 @@ section#contact {
   overflow: hidden;
   background: rgba(0, 0, 0, 0.7);
 }
-section#contact::before {
+section#contact::after {
   background-color: #004381;
   background-size: 10%;
-  background-image: url('../img/meliora.png');
+  background-image: url('../img/meliora2.png');
   content: "";
   position: absolute;
   width: 200%;
@@ -3470,19 +3490,35 @@ ul.social-buttons li a:active {
   box-shadow: none;
   border: none;
   min-height: 100%;
-  padding: 0px 0 100px;
+  padding: 0px 0 20px;
+}
+.portfolio-modal .modal-content .header {
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
   text-align: center;
+  text-shadow: 0px 0px 3px black, 0px 0px 8px black;
+}
+.portfolio-modal .modal-content .header.sprint0 {
+  background-image: url('../img/portfolio/discovery.jpg');
+}
+.portfolio-modal .modal-content .header.research {
+  background-image: url('../img/portfolio/research.jpg');
+}
+.portfolio-modal .modal-content .header.product {
+  background-image: url('../img/portfolio/product.jpg');
+}
+.portfolio-modal .modal-content .header .header-content {
+  padding: 50px;
 }
 .portfolio-modal .modal-content h2 {
   margin-bottom: 15px;
   font-size: 3em;
 }
-.portfolio-modal .modal-content p {
-  margin-bottom: 30px;
-}
 .portfolio-modal .modal-content p.item-intro {
   margin: 20px 0 30px;
   font-family: 'Times New Roman', Times, serif;
+  text-align: center;
   font-style: italic;
   font-size: 16px;
 }
@@ -3493,17 +3529,32 @@ ul.social-buttons li a:active {
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
 }
+.portfolio-modal .modal-content .btn-primary {
+  margin-top: 30px;
+}
 .portfolio-modal .close-modal {
+  color: white;
   position: absolute;
   background-color: transparent;
   top: 0px;
   right: 15px;
   cursor: pointer;
   z-index: 9999;
+  text-shadow: 0px 0px 3px black, 0px 0px 8px black;
 }
 .portfolio-modal .modal-backdrop {
   opacity: 0;
   display: none;
+}
+.mc-modal {
+  z-index: 9999 !important;
+  top: 100px !important;
+}
+.mc-closeModal {
+  background: white;
+  padding: 5px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
 }
 .ion-2x {
   font-size: 2em;
@@ -3632,6 +3683,57 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-primary .badge {
   color: #e6cb00;
+  background-color: white;
+}
+.btn-secondary {
+  color: white;
+  background-color: #004381;
+  border-color: #004381;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary.focus,
+.btn-secondary:active,
+.btn-secondary.active,
+.open > .dropdown-toggle.btn-secondary {
+  color: white;
+  background-color: #003668;
+  border-color: #00305d;
+}
+.btn-secondary:active,
+.btn-secondary.active,
+.open > .dropdown-toggle.btn-secondary {
+  background-image: none;
+}
+.btn-secondary.disabled,
+.btn-secondary[disabled],
+fieldset[disabled] .btn-secondary,
+.btn-secondary.disabled:hover,
+.btn-secondary[disabled]:hover,
+fieldset[disabled] .btn-secondary:hover,
+.btn-secondary.disabled:focus,
+.btn-secondary[disabled]:focus,
+fieldset[disabled] .btn-secondary:focus,
+.btn-secondary.disabled.focus,
+.btn-secondary[disabled].focus,
+fieldset[disabled] .btn-secondary.focus,
+.btn-secondary.disabled:active,
+.btn-secondary[disabled]:active,
+fieldset[disabled] .btn-secondary:active,
+.btn-secondary.disabled.active,
+.btn-secondary[disabled].active,
+fieldset[disabled] .btn-secondary.active {
+  background-color: #004381;
+  border-color: #004381;
+}
+.btn-secondary .badge {
+  color: #004381;
   background-color: white;
 }
 .btn-xl {

@@ -4,6 +4,17 @@
   .portfolio-item {
     margin: 0 0 15px;
     right: 0;
+    display: block;
+    text-decoration: none;
+    color: @gray-darkest;
+    font-weight: initial;
+    &:hover {
+      text-decoration: none;
+      .portfolio-link .portfolio-hover {
+        opacity: 1;
+        filter: blur(0);
+      }
+    }
     .portfolio-link {
       display: block;
       position: relative;
@@ -18,9 +29,6 @@
         transition: all ease 0.5s;
         -webkit-transition: all ease 0.5s;
         -moz-transition: all ease 0.5s;
-        &:hover {
-          opacity: 1;
-        }
         .portfolio-hover-content {
           position: absolute;
           width: 100%;
@@ -55,6 +63,14 @@
         font-style: italic;
         font-size: 16px;
         margin: 0;
+        line-height: 1.5;
+        margin-top: 10px;
+      }
+      @media (min-width: 768px) {
+        min-height: 150px;
+      }
+      @media (min-width: 992px) {
+        min-height: 130px;
       }
     }
   }

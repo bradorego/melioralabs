@@ -12,6 +12,18 @@
 
 // Global Components
 
+.mc-modal {
+  z-index: 9999 !important;
+  top: 100px !important;
+
+}
+.mc-closeModal {
+  background: white;
+  padding: 5px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
 .ion-2x {
   font-size: 2em;
   width: 40px;
@@ -103,6 +115,12 @@ h1, h2, h3, h4, h5, h6 {
 	.button-variant(white; @brand-primary; @brand-primary);
 	.heading-font;
 	font-weight: 700;
+}
+
+.btn-secondary {
+  .button-variant(white; @brand-secondary; @brand-secondary);
+  .heading-font;
+  font-weight: 700;
 }
 
 .btn-xl {
