@@ -3450,7 +3450,6 @@ section#contact .text-danger {
 }
 footer {
   padding: 25px 0;
-  text-align: center;
 }
 footer span.copyright {
   line-height: 40px;
@@ -3473,8 +3472,20 @@ footer div[class^="col"] {
     margin-bottom: 0px;
   }
 }
+footer .affiliate {
+  text-align: right;
+}
+@media (max-width: 768px) {
+  footer .social,
+  footer .affiliate {
+    text-align: center;
+  }
+}
 ul.social-buttons {
   margin-bottom: 0;
+}
+ul.social-buttons li {
+  text-align: center;
 }
 ul.social-buttons li a {
   display: block;
