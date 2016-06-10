@@ -3465,6 +3465,14 @@ footer ul.quicklinks {
   text-transform: uppercase;
   text-transform: none;
 }
+footer div[class^="col"] {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  footer div[class^="col"] {
+    margin-bottom: 0px;
+  }
+}
 ul.social-buttons {
   margin-bottom: 0;
 }
