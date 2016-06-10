@@ -3823,7 +3823,7 @@ section h3.section-subheading {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  #email .col-sm-6 {
+  #email .col-sm-5 {
     padding: 0;
   }
 }
