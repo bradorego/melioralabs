@@ -3853,7 +3853,7 @@ section h3.section-subheading {
   color: #e74c3c;
 }
 aside {
-  background: #004381;
+  background: #004381 !important;
   color: white;
   padding: 20px 0px;
 }
