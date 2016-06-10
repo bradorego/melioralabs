@@ -165,16 +165,23 @@ section {
 
 // Clients Aside
 
-aside.clients {
+aside {
   background: @brand-dark;
   color: white;
-  padding-bottom: 20px;
+  padding: 20px 0px;
+  p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  h3 {
+    margin-top: 0;
+  }
   .trusted-by {
     .serif-font;
     font-style: italic;
     text-transform: initial;
   }
-	img {
+	.img-responsive {
 		margin: 25px auto;
     @media (max-width: 640px) {
       width: 150px;

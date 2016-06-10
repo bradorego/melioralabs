@@ -3074,9 +3074,6 @@ header .intro-text .intro-lead-in {
   line-height: 22px;
   margin-bottom: 25px;
 }
-header .intro-text p {
-  margin-bottom: 35px;
-}
 @media (min-width: 768px) {
   header .intro-text .intro-lead-in {
     font-family: 'Times New Roman', Times, serif;
@@ -3814,21 +3811,28 @@ section h3.section-subheading {
   margin: 15px 0;
   text-transform: none;
 }
-aside.clients {
+aside {
   background: #004381;
   color: white;
-  padding-bottom: 20px;
+  padding: 20px 0px;
 }
-aside.clients .trusted-by {
+aside p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+aside h3 {
+  margin-top: 0;
+}
+aside .trusted-by {
   font-family: 'Times New Roman', Times, serif;
   font-style: italic;
   text-transform: initial;
 }
-aside.clients img {
+aside .img-responsive {
   margin: 25px auto;
 }
 @media (max-width: 640px) {
-  aside.clients img {
+  aside .img-responsive {
     width: 150px;
   }
 }
