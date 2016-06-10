@@ -47,20 +47,6 @@ $(function() {
     }
   });
 
-  $('.subscribe').click(function (e) {
-    e.preventDefault();
-    document.cookie = "MCEvilPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
-    require(["mojo/signup-forms/Loader"],
-      function(L) {
-        L.start({
-          "baseUrl":"mc.us13.list-manage.com",
-          "uuid":"47b637469fe9207559b59e168",
-          "lid":"4c78b2dc91"
-        });
-      }
-    );
-  });
-
   $.fn.extend({
     animateCss: function (animationName, removeClass) {
       var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';

@@ -3811,6 +3811,40 @@ section h3.section-subheading {
   margin: 15px 0;
   text-transform: none;
 }
+#email input {
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
+#email .form-group {
+  margin-bottom: 20px;
+}
+@media (min-width: 768px) {
+  #email .col-sm-6 {
+    padding: 0;
+  }
+}
+#email .disclaimer {
+  font-size: 12px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+#email #mc_embed_signup input.mce_inline_error {
+  border: none;
+  box-shadow: 0px 0px 5px 5px #e74c3c;
+}
+#email .response {
+  margin-bottom: 20px;
+}
+#email .response#mce-success-response {
+  color: #e6cb00;
+}
+#email .response#mce-error-response {
+  color: #e74c3c;
+}
 aside {
   background: #004381;
   color: white;

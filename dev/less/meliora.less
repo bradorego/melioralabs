@@ -163,6 +163,41 @@ section {
 }
 
 
+#email {
+  input {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    .transition-all;
+  }
+  .form-group {
+    margin-bottom: 20px;
+  }
+  @media (min-width: 768px) {
+    .col-sm-6 {
+      padding: 0;
+    }
+  }
+  .disclaimer {
+    font-size: 12px;
+    margin-top: 20px;
+    margin-bottom: 0;
+  }
+  #mc_embed_signup input.mce_inline_error {
+    border: none;
+    .form-error;
+  }
+  .response {
+    margin-bottom: 20px;
+    &#mce-success-response {
+      color: @brand-primary;
+    }
+    &#mce-error-response {
+      color: @brand-danger;
+    }
+  }
+}
+
 // Clients Aside
 
 aside {
