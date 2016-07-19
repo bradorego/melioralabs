@@ -3572,16 +3572,6 @@ ul.social-buttons li a:active {
   opacity: 0;
   display: none;
 }
-.mc-modal {
-  z-index: 9999 !important;
-  top: 100px !important;
-}
-.mc-closeModal {
-  background: white;
-  padding: 5px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
 .ion-2x {
   font-size: 2em;
   width: 40px;
@@ -3817,7 +3807,7 @@ fieldset[disabled] .btn-xl.active {
   background-color: white;
 }
 section {
-  padding: 50px 0;
+  padding: 70px 0 50px;
   overflow: hidden;
 }
 section h2.section-heading {
