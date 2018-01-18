@@ -1,11 +1,14 @@
 var gulp = require('gulp'),
-  sass = require('gulp-sass')
-  serve = require('gulp-serve'),
+  sass = require('gulp-sass'),
   uglify = require('gulp-uglify'),
   cleanCSS = require('gulp-clean-css'),
   minifyHTML = require('gulp-htmlmin'),
   del = require('del'),
   concat = require('gulp-concat');
+let nunjucksRender = require('gulp-nunjucks-render');
+let browserSync = require('browser-sync').create();
+let runSequence = require('run-sequence');
+
 
 const DEV_ROOT = './dev',
   PROD_ROOT = './deploy',
@@ -15,9 +18,32 @@ const DEV_ROOT = './dev',
 
 // define tasks here
 gulp.task('default', ['sass', 'concat-js', 'concat-css', 'serve'], function () {
+  gulp.watch(`${DEV_ROOT}/nunjucks/**/*.njs`, ['nunjucks']);
   gulp.watch(`${SCSS_ROOT}/*.scss`, ['sass']);
   gulp.watch([`${CSS_ROOT}/*.css`, `!${CSS_ROOT}/all.css`], ['concat-css']);
   gulp.watch([`${JS_ROOT}/*.js`, `!${JS_ROOT}/all.js`], ['concat-js']);
+});
+
+gulp.task('nunjucks', () => {
+  return gulp.src(`${DEV_ROOT}/nunjucks/pages/**/*.njs`)
+  // Renders template with nunjucks
+  .pipe(nunjucksRender({
+      path: [`${DEV_ROOT}/nunjucks/templates`]
+    }))
+  // output files in app folder
+  .pipe(gulp.dest(DEV_ROOT))
+  .pipe(browserSync.reload({
+    stream: true
+  }));
+});
+
+gulp.task('sass', function () {
+  return gulp.src(`${SCSS_ROOT}/meliora.scss`)
+    .pipe(sass())
+    .pipe(gulp.dest(CSS_ROOT))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 gulp.task('concat-js', function () {
@@ -27,13 +53,6 @@ gulp.task('concat-js', function () {
     .pipe(gulp.dest(JS_ROOT));
 });
 
-gulp.task('sass', function () {
-  // del.sync(['./dev/css/creative.css']);
-  return gulp.src(`${SCSS_ROOT}/meliora.scss`)
-    .pipe(sass())
-    .pipe(gulp.dest(CSS_ROOT));
-});
-
 gulp.task('concat-css', function () {
   del.sync([`${CSS_ROOT}/all.css`]);
   return gulp.src(`${CSS_ROOT}/*.css`)
@@ -41,18 +60,26 @@ gulp.task('concat-css', function () {
     .pipe(gulp.dest(CSS_ROOT));
 });
 
-gulp.task('serve', serve({
-  root: ['dev'],
-  port: 8000
-}));
+// Configure the browserSync task
+gulp.task('serve', function() {
+  browserSync.init({
+    server: {
+      baseDir: DEV_ROOT,
+    },
+    port: 8000
+  })
+})
+
+gulp.task('serve-deploy', function() {
+  browserSync.init({
+    server: {
+      baseDir: PROD_ROOT,
+    },
+    port: 8001
+  })
+})
 
 gulp.task('serve-prod', ['serve-deploy']);
-
-gulp.task('serve-deploy', serve({
-  root: ['deploy'],
-  port: 8001
-}))
-
 
 gulp.task('uglifyjs-deploy', function () {
   del.sync([`${PROD_ROOT}/js`]);
@@ -94,7 +121,9 @@ gulp.task('clean', function () {
 
 gulp.task('deploy', ['build']); /// alias, because I know I'll do both
 
-gulp.task('build', ['clean', 'sass', 'deploy-img', 'deploy-font', 'uglifyjs-deploy', 'uglifycss-deploy', 'minifyHTML'], function () { /// then copy stuff!
+gulp.task('prebuild', ['nunjucks', 'sass', 'concat-js', 'concat-css']);
+gulp.task('build', [], function () { /// then copy stuff!
+  runSequence('prebuild', 'clean', 'deploy-img', 'deploy-font', 'uglifyjs-deploy', 'uglifycss-deploy', 'minifyHTML');
   gulp.src(`${DEV_ROOT}/portfolio/**.*`)
     .pipe(gulp.dest(`${PROD_ROOT}/portfolio`));
   gulp.src(`${DEV_ROOT}/robots.txt`)
