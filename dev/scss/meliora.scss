@@ -1,14 +1,14 @@
-@import "variables.less";
-@import "mixins.less";
+@import "variables";
+@import "mixins";
 
-@import "nav.less";
-@import "header.less";
-@import "portfolio.less";
-@import "timeline.less";
-@import "team.less";
-@import "contact.less";
-@import "footer.less";
-@import "modal.less";
+@import "nav";
+@import "header";
+@import "portfolio";
+@import "timeline";
+// @import "team";
+@import "contact";
+@import "footer";
+@import "modal";
 
 // Global Components
 
@@ -41,26 +41,26 @@
   color: white;
   border-radius: 50%;
   display: inline-block;
-  background: @brand-dark;
+  background: $brand-dark;
   &.primary {
-    background: @brand-primary;
+    background: $brand-primary;
   }
   &.secondary {
-    background: @brand-secondary;
+    background: $brand-secondary;
   }
 }
 
 body {
 	overflow-x: hidden;
-	.body-font;
+	@include body-font;
 }
 
 .text-muted {
-	color: @gray;
+	color: $gray;
 }
 
 .text-primary {
-	color: @brand-primary;
+	color: $brand-primary;
 }
 
 p {
@@ -81,7 +81,7 @@ a.active {
 }
 
 a {
-	color: @brand-secondary;
+	color: $brand-secondary;
   font-weight: 900;
 }
 
@@ -89,11 +89,11 @@ a:hover,
 a:focus,
 a:active,
 a.active {
-	color: darken(@brand-secondary, 10%);
+	color: darken($brand-secondary, 10%);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	.heading-font;
+	@include heading-font;
 	font-weight: 700;
 }
 
@@ -102,30 +102,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .bg-light-gray {
-	background-color: @gray-lighter;
+	background-color: $gray-lighter;
 }
 
 .bg-darkest-gray {
-	background-color: @gray-darkest;
+	background-color: $gray-darkest;
 }
 
 // Restyled Primary Buttons
 
 .btn-primary {
-	.button-variant(white; @brand-primary; @brand-primary);
-	.heading-font;
+	@include button-variant(white, $brand-primary, $brand-primary);
+	@include heading-font;
 	font-weight: 700;
 }
 
 .btn-secondary {
-  .button-variant(white; @brand-secondary; @brand-secondary);
-  .heading-font;
+  @include button-variant(white, $brand-secondary, $brand-secondary);
+  @include heading-font;
   font-weight: 700;
 }
 
 .btn-xl {
-	.button-variant(white; @brand-primary; @brand-primary);
-	.heading-font;
+	@include button-variant(white, $brand-primary, $brand-primary);
+	@include heading-font;
 	font-weight: 700;
 	border-radius: 3px;
 	font-size: 18px;
@@ -147,7 +147,7 @@ section {
   }
   h3.section-subheading {
   	font-size: 16px;
-  	.serif-font;
+  	@include serif-font;
   	text-transform: none;
   	font-style: italic;
   	font-weight: 400;
@@ -168,7 +168,7 @@ section {
     width: 100%;
     border-radius: 0;
     box-shadow: none;
-    .transition-all;
+    @include transition-all;
   }
   .form-group {
     margin-bottom: 20px;
@@ -185,15 +185,15 @@ section {
   }
   #mc_embed_signup input.mce_inline_error {
     border: none;
-    .form-error;
+    @include form-error;
   }
   .response {
     margin-bottom: 20px;
     &#mce-success-response {
-      color: @brand-primary;
+      color: $brand-primary;
     }
     &#mce-error-response {
-      color: @brand-danger;
+      color: $brand-danger;
     }
   }
 }
@@ -201,7 +201,7 @@ section {
 // Clients Aside
 
 aside {
-  background: @brand-dark !important;
+  background: $brand-dark !important;
   color: white;
   padding: 20px 0px;
   p {
@@ -212,7 +212,7 @@ aside {
     margin-top: 0;
   }
   .trusted-by {
-    .serif-font;
+    @include serif-font;
     font-style: italic;
     text-transform: initial;
   }
@@ -235,13 +235,13 @@ aside {
 
 ::-moz-selection {
   text-shadow: none;
-  background: @brand-secondary;
+  background: $brand-secondary;
   color: white;
 }
 
 ::selection {
   text-shadow: none;
-  background: @brand-secondary;
+  background: $brand-secondary;
   color: white;
 }
 
@@ -254,5 +254,5 @@ img::-moz-selection {
 }
 
 body {
-  webkit-tap-highlight-color: @brand-secondary;
+  webkit-tap-highlight-color: $brand-secondary;
 }

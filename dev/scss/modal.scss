@@ -15,7 +15,7 @@
       background-size: cover;
       color: white;
       text-align: center;
-      .header-text-shadow;
+      @include header-text-shadow;
       &.sprint0 {
         background-image: url('../img/portfolio/discovery.jpg');
       }
@@ -35,7 +35,7 @@
     }
     p.item-intro {
       margin: 20px 0 30px;
-      .serif-font;
+      @include serif-font;
       text-align: center;
       font-style: italic;
       font-size: 16px;
@@ -59,7 +59,7 @@
     right: 15px;
     cursor: pointer;
     z-index: 9999;
-    .header-text-shadow;
+    @include header-text-shadow;
   } /// end .close-modal
   .modal-backdrop {
     opacity: 0;

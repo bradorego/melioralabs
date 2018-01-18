@@ -55,13 +55,13 @@
       height: 80px;
       position: absolute;
       z-index: 100;
-      background-color: @brand-secondary;
+      background-color: $brand-secondary;
       color: white;
       border-radius: 100%;
       border: 7px solid #f1f1f1;
       text-align: center;
       &.img-meliora { /// override for logo
-        background: @gray-darkest;
+        background: $gray-darkest;
         img {
           width: 80%;
           border-radius: 0;
@@ -123,7 +123,7 @@
       position: relative;
       padding: 0px 25px 10px;
       p {
-        .serif-font();
+        @include serif-font();
         font-size: 18px;
         font-style: italic;
       }

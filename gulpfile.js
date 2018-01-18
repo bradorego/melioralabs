@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-  less = require('gulp-less')
+  sass = require('gulp-sass')
   serve = require('gulp-serve'),
   uglify = require('gulp-uglify'),
   cleanCSS = require('gulp-clean-css'),
@@ -14,8 +14,8 @@ const DEV_ROOT = './dev',
   SCSS_ROOT = `${DEV_ROOT}/scss`;
 
 // define tasks here
-gulp.task('default', ['less', 'concat-js', 'concat-css', 'serve'], function () {
-  gulp.watch(`${DEV_ROOT}/less/*.less`, ['less']);
+gulp.task('default', ['sass', 'concat-js', 'concat-css', 'serve'], function () {
+  gulp.watch(`${SCSS_ROOT}/*.scss`, ['sass']);
   gulp.watch([`${CSS_ROOT}/*.css`, `!${CSS_ROOT}/all.css`], ['concat-css']);
   gulp.watch([`${JS_ROOT}/*.js`, `!${JS_ROOT}/all.js`], ['concat-js']);
 });
@@ -27,10 +27,10 @@ gulp.task('concat-js', function () {
     .pipe(gulp.dest(JS_ROOT));
 });
 
-gulp.task('less', function () {
+gulp.task('sass', function () {
   // del.sync(['./dev/css/creative.css']);
-  return gulp.src('./dev/less/meliora.less')
-    .pipe(less())
+  return gulp.src(`${SCSS_ROOT}/meliora.scss`)
+    .pipe(sass())
     .pipe(gulp.dest(CSS_ROOT));
 });
 
@@ -94,7 +94,7 @@ gulp.task('clean', function () {
 
 gulp.task('deploy', ['build']); /// alias, because I know I'll do both
 
-gulp.task('build', ['clean', 'less', 'deploy-img', 'deploy-font', 'uglifyjs-deploy', 'uglifycss-deploy', 'minifyHTML'], function () { /// then copy stuff!
+gulp.task('build', ['clean', 'sass', 'deploy-img', 'deploy-font', 'uglifyjs-deploy', 'uglifycss-deploy', 'minifyHTML'], function () { /// then copy stuff!
   gulp.src(`${DEV_ROOT}/portfolio/**.*`)
     .pipe(gulp.dest(`${PROD_ROOT}/portfolio`));
   gulp.src(`${DEV_ROOT}/robots.txt`)
