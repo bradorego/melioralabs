@@ -1,36 +1,36 @@
 // Font Selections
 
-.script-font() {
+@mixin script-font(){
 	font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
 
-.body-font() {
+@mixin body-font(){
 	font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.heading-font() {
+@mixin heading-font(){
 	font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	text-transform: uppercase;
 }
 
-.header-text-shadow() {
+@mixin header-text-shadow(){
 	text-shadow: 0px 0px 3px black, 0px 0px 8px black;
 }
 
-.form-error() {
-  box-shadow: 0px 0px 5px 5px @brand-danger;
+@mixin form-error(){
+  box-shadow: 0px 0px 5px 5px $brand-danger;
 }
 
 /////////////
 /////////////
 /////////////
 
-.background-tile() {
+@mixin background-tile(){
 	position: relative;
   overflow: hidden;
   background: rgba(0, 0, 0, 0.7);
 	&::after {
-	  background-color: @brand-dark;
+	  background-color: $brand-dark;
 	  background-size: 10%;
 	  background-image: url('../img/meliora2.png');
 	  content: "";
@@ -53,77 +53,77 @@
 
 /// custom mixins
 
-.navbar-text() {
+@mixin navbar-text(){
   text-transform: uppercase;
   font-weight: 700;
   font-size: 13px;
   color: white;
 }
-.fade-text(@color) {
-	color: @color;
+@mixin fade-text($color){
+	color: $color;
 	opacity: 0.7;
 }
 
 // Mixins
 
-.transition-all() {
+@mixin transition-all(){
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
 
-.background-cover() {
+@mixin background-cover(){
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
 }
 
-.button-variant(@color; @background; @border) {
-	color: @color;
-	background-color: @background;
-	border-color: @border;
-	.transition-all;
+@mixin button-variant($color, $background, $border){
+	color: $color;
+	background-color: $background;
+	border-color: $border;
+	@include transition-all;
 
 	&:hover,
 	&:focus,
 	&.focus,
 	&:active,
 	&.active,
-	.open > .dropdown-toggle& {
-		color: @color;
-		background-color: darken(@background, 5%);
-	    border-color: darken(@border, 7%);
+	.open > .dropdown-toggle {
+		color: $color;
+		background-color: darken($background, 5%);
+	    border-color: darken($border, 7%);
 	}
 	&:active,
 	&.active,
-	.open > .dropdown-toggle& {
+	.open > .dropdown-toggle {
 		background-image: none;
 	}
 	&.disabled,
 	&[disabled],
-	fieldset[disabled] & {
+	fieldset[disabled] {
 		&,
 		&:hover,
 		&:focus,
 		&.focus,
 		&:active,
 		&.active {
-			background-color: @background;
-			border-color: @border;
+			background-color: $background;
+			border-color: $border;
 		}
 	}
 
 	.badge {
-		color: @background;
-		background-color: @color;
+		color: $background;
+		background-color: $color;
 	}
 }
 
-.sans-serif-font() {
+@mixin sans-serif-font(){
 	font-family: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 }
 
-.serif-font() {
+@mixin serif-font(){
 	font-family: 'Times New Roman', Times, serif;
 }

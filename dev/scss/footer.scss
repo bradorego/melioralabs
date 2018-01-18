@@ -5,13 +5,13 @@ footer {
   padding: 25px 0;
   span.copyright {
     line-height: 40px;
-    .heading-font;
+    @include heading-font;
     text-transform: none;
   }
   ul.quicklinks {
     margin-bottom: 0;
     line-height: 40px;
-    .heading-font;
+    @include heading-font;
     text-transform: none;
   }
   div[class^="col"] {
@@ -38,7 +38,7 @@ ul.social-buttons {
     text-align: center;
     a {
       display: block;
-      background-color: @brand-secondary;
+      background-color: $brand-secondary;
       height: 40px;
       width: 40px;
       border-radius: 100%;
@@ -46,11 +46,11 @@ ul.social-buttons {
       line-height: 40px;
       color: white;
       outline: none;
-      .transition-all;
+      @include transition-all;
       &:hover,
       &:focus,
       &:active {
-        background-color: @brand-primary;
+        background-color: $brand-primary;
       }
     }
   }

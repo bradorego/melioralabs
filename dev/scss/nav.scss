@@ -3,38 +3,38 @@
 // Custom Navigation Bar
 
 .navbar-default {
-  background-color: @brand-dark;
-  border-color: @brand-primary;
+  background-color: $brand-dark;
+  border-color: $brand-primary;
   border-bottom-width: 2px;
-  .sans-serif-font;
-  .transition-all;
+  @include sans-serif-font;
+  @include transition-all;
   .navbar-header .navbar-brand {
     padding: 10px;
   }
   .navbar-toggle { /// responsive menu toggle
-    background: @brand-secondary;
+    background: $brand-secondary;
     border-width: 0;
     .icon-bar {
-      background-color: @brand-primary;
+      background-color: $brand-primary;
     }
     &:focus,
     &:hover {
-      background: @brand-primary;
+      background: $brand-primary;
       .icon-bar {
-        background-color: @brand-secondary;
+        background-color: $brand-secondary;
       }
     }
-    color: @brand-secondary;
+    color: $brand-secondary;
   }
   .nav {
     > li {
       > a,
       > a:focus {
-        .navbar-text();
+        @include navbar-text();
         text-align: center;
         font-size: 16px;
         &:hover {
-          color: @brand-primary !important;
+          color: $brand-primary !important;
           background: transparent !important;
         }
       }
@@ -42,7 +42,7 @@
       &.active {
         > a,
         > a:focus {
-          color: lighten(@brand-primary, 20%);
+          color: lighten($brand-primary, 20%);
           background-color: transparent;
         }
       }
@@ -50,17 +50,17 @@
   }
   @media (min-width: 768px) {
     background-color: transparent;
-    border-color: @brand-primary;
+    border-color: $brand-primary;
     .nav > li > a,
     .nav > li > a:focus {
-      .fade-text(white);
+      @include fade-text(white);
       &:hover {
         color: white;
         opacity: 1;
       }
     }
     &.affix {
-      background-color: @brand-dark;
+      background-color: $brand-dark;
       .nav > li > a,
       .nav > li > a:focus {
         opacity: 1;
