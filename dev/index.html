@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>MelioraLabs - UX Design & Product Research</title>
+    <title>MelioraLabs - Practical UX Research</title>
 
     <!-- Custom CSS -->
     <link href="css/all.css" rel="stylesheet">
@@ -28,12 +28,25 @@
       ga('create', 'UA-36860431-2', 'auto');
       ga('send', 'pageview');
     </script>
-    <script type="text/javascript">
-      (function(e, t) {
-        function r(e, t) {e[t] = function() {e.push([ t ].concat(Array.prototype.slice.call(arguments, 0)));};}
-        var n = "JacoRecorder";
-        (function(e, t, i, s) {if (!i.__VERSION) {e[n] = i;var o = [ "init", "identify", "startRecording", "stopRecording", "removeUserTracking", "setUserInfo" ];for (var u = 0; u < o.length; u++) r(i, o[u]);i.__VERSION = .9, i.__INIT_TIME = 1 * new Date;var a = t.createElement("script");a.async = !0, a.setAttribute("crossorigin", "anonymous"), a.src = s;var f = t.getElementsByTagName("head")[0];f.appendChild(a);}})(e, t, e[n] || [], "//recorder-assets.getjaco.com/recorder.js");
-      }).call(window, window, document), window.JacoRecorder.push([ "init", "2d2e6765-e8bf-4b5b-af22-15386628931d", {} ]);
+    <script>
+      window['_fs_debug'] = false;
+      window['_fs_host'] = 'fullstory.com';
+      window['_fs_org'] = '9Y17Y';
+      window['_fs_namespace'] = 'FS';
+      if (!window.location.href.includes("localhost")) { ///only start fullstory if not local
+        (function(m,n,e,t,l,o,g,y){
+            if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+            g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
+            o=n.createElement(t);o.async=1;o.src='https://'+_fs_host+'/s/fs.js';
+            y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+            g.identify=function(i,v){g(l,{uid:i});if(v)g(l,v)};g.setUserVars=function(v){g(l,v)};
+            y="rec";g.shutdown=function(i,v){g(y,!1)};g.restart=function(i,v){g(y,!0)};
+            g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+            g.clearUserCookie=function(c,d,i){if(!c || document.cookie.match('fs_uid=[`;`]*`[`;`]*`[`;`]*`')){
+            d=n.domain;while(1){n.cookie='fs_uid=;domain='+d+
+            ';path=/;expires='+new Date(0).toUTCString();i=d.indexOf('.');if(i<0)break;d=d.slice(i+1)}}};
+        })(window,document,window['_fs_namespace'],'script','user');
+      }
     </script>
 </head>
 
@@ -337,155 +350,20 @@
             <ul class="list-inline social-buttons">
               <li><a href="https://www.facebook.com/melioralabs"><i class="ion-social-facebook"></i></a></li>
               <li><a href="https://twitter.com/melioralabs"><i class="ion-social-twitter"></i></a></li>
-              <li><a href="https://linkedin.com/in/bradorego"><i class="ion-social-linkedin"></i></a></li>
+              <li><a href="https://www.linkedin.com/company/10805182/"><i class="ion-social-linkedin"></i></a></li>
+              <li><a href="https://www.medium.com/melioralabs/"><i class="ion-social-rss"></i></a></li>
               <li><a href="mailto:hello@melioralabs.com?subject=Hello from MelioraLabs.com"><i class="ion-android-mail"></i></a></li>
             </ul>
           </div>
           <div class="col-sm-6 affiliate">
             <a href="https://mixpanel.com/f/partner" rel="nofollow"><img src="//cdn.mxpnl.com/site_media/images/partner/badge_blue.png" alt="Mobile Analytics" /></a>
-            <a href='//getjaco.com' rel='nofollow' target='_blank'><img src='//www.getjaco.com/images/free_with_logo/jaco-badge-green.png' alt='Jaco Analytics' /></a>
           </div>
         </div>
       </div>
     </footer>
 
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="sprint0Modal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <i class="ion-close ion-4x"></i>
-        </div>
-        <div class="header sprint0">
-          <div class="container">
-            <div class="header-content">
-              <h2>Sprint Zero</h2>
-              <ul class="list-inline">
-                <li>Cost: $</li>
-                <li>Time: 2-4 weeks</li>
-                <li>Stage: Early</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <p>"Sprint Zero" is a codename we use at MelioraLabs to refer to a set of exercises and deliverables that properly frames any development project, making sure proper research has been done and everyone understands the exact scope of the project.</p>
-                <p class="item-intro">Have you ever wasted time, energy, and budget re-working things that didn't turn out the way you wanted?<br/><br/>Sprint Zero solves that problem.</p>
-                <p>The term "Sprint Zero" comes from the agile development process. The zeroth sprint in your project, in our opinion, is making sure you're ready to build the thing that your customers actually want. Or, in the event that they don't, you just saved everyone a lot of time and money.</p>
-                <h3>What's Included</h3>
-                <p>A typical deliverable of Sprint Zero includes:
-                <ul>
-                  <li>Personas</li>
-                  <li>Task Analysis</li>
-                  <li>Wireframes</li>
-                  <li>User Stories</li>
-                  <li>Suggested Project Plan</li>
-                </ul>
-                <p class="item-intro">Sound like something your project could use?</p>
-                <a href="#contact" class="btn btn-secondary btn-block btn-lg page-scroll" data-dismiss="modal">Let's Talk</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="userResearchModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <i class="ion-close ion-4x"></i>
-        </div>
-        <div class="header research">
-          <div class="container">
-            <div class="header-content">
-              <h2>Usability Research</h2>
-              <ul class="list-inline">
-                <li>Cost: $$</li>
-                <li>Time: 2-12 weeks</li>
-                <li>Stage: Mid-Late</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <p>Usability Research is, according to Wikipedia, "a technique to evaluate a product by testing it on users. This can be seen as an irreplaceable usability practice, since it gives direct input on how real users use the system". At MelioraLabs, we like to look at it from a more practical standpoint: Usability Research is the best way to get an in depth look at how your product is being used and learn how to make it better.</p>
-                <p class="item-intro">One of our favorite things about Usability Research is it can be done at pretty much any stage of the game. Do you have an existing product, either in the wild or ready to be released? Excellent. Let's give it a whirl. Do you only have a product idea? Let's test existing products to see what real people struggle with so you know how to improve.<br/><br/>We can even do interim tests in the middle of implementation. In fact, that's usually the best time to do research.</p>
-                <p>By knowing how far along the process your product is, and what your goals are in running a study, we can pick the proper hypothesis, develop the right tests, and use the best methodology to get the answers you need to make your product better.</p>
-                <h3>What's Included</h3>
-                <p>Usability Research comes in many forms:
-                <ul>
-                  <li>Design Ethnography</li>
-                  <li>Paired Interaction</li>
-                  <li>Remote Usability</li>
-                  <li>Think-Aloud</li>
-                  <li>Focus Group</li>
-                  <li>Diary Study</li>
-                  <li>A/B Testing</li>
-                </ul>
-                <p>And, of course, a full analysis and report on our findings, complete with raw video and all of the testing materials used.</p>
-                <p class="item-intro">Curious what people are doing with your product and why?</p>
-                <a href="#contact" class="btn btn-secondary btn-block btn-lg page-scroll" data-dismiss="modal">Let's Talk</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal modal fade" id="productManagementModal" tabindex="-1" role="dialog" aria-hidden="true">
-      <div class="modal-content">
-        <div class="close-modal" data-dismiss="modal">
-          <i class="ion-close ion-4x"></i>
-        </div>
-        <div class="header product">
-          <div class="container">
-            <div class="header-content">
-              <h2>Product Management</h2>
-              <ul class="list-inline">
-                <li>Cost: $$$$</li>
-                <li>Time: Product Lifetime</li>
-                <li>Stage: All</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-              <div class="modal-body">
-                <!-- Project Details Go Here -->
-                <p>Product Management is a combination of planning, prioritization, research, and design. Effective product managers balance the vision of the product with the needs of the business. Product Managers are there to make sure what's being built is on track with what the customer actually wants.</p>
-                <p class="item-intro">MelioraLabs' Product-Management-for-hire model gives you a dedicated expert to be the "voice of the customer" throughout your development process.</p>
-                <p>The major difference between MelioraLabs' Product Management and our other services is we're in it for the long haul &mdash; we'll get involved early in the process to help you define your scope and make sure the feature set is on target and then continue the engagement to help you prioritize your backlog, fight scope creep, and run interim usability tests (ideally every sprint) to catch and nuances during development.</p>
-                <p>And once you're ready for deployment, we'll still be there, managing your analytics suite, producing appropriate reports, and guiding ongoing development as you go from Minimum Viable to Most Valuable.
-                <h3>What's Included</h3>
-                <p>ML Product Management includes:
-                <ul>
-                  <li>Sprint Zero</li>
-                  <li>Usability Research</li>
-                  <li>Backlog Prioritization</li>
-                  <li>The "Voice of the Customer"</li>
-                  <li>Ongoing Analytics and Research</li>
-                </ul>
-                <p class="item-intro">Need someone to make sure your product meets-and-exceeds expectations?</p>
-                <a href="#contact" class="btn btn-secondary btn-block btn-lg page-scroll" data-dismiss="modal">Let's Talk</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- jQuery -->
     <script src="js/all.js"></script>
-    <!-- <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='NAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script> -->
 </body>
 
 </html>
