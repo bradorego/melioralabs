@@ -3,41 +3,50 @@ var gulp = require('gulp'),
   serve = require('gulp-serve'),
   uglify = require('gulp-uglify'),
   cleanCSS = require('gulp-clean-css'),
+  minifyHTML = require('gulp-htmlmin'),
   del = require('del'),
   concat = require('gulp-concat');
 
+const DEV_ROOT = './dev',
+  PROD_ROOT = './deploy',
+  JS_ROOT = `${DEV_ROOT}/js`,
+  CSS_ROOT = `${DEV_ROOT}/css`,
+  SCSS_ROOT = `${DEV_ROOT}/scss`;
+
 // define tasks here
 gulp.task('default', ['less', 'concat-js', 'concat-css', 'serve'], function () {
-  gulp.watch('./dev/less/*.less', ['less']);
-  gulp.watch(['./dev/css/*.css', '!./dev/css/all.css'], ['concat-css']);
-  gulp.watch(['./dev/js/*.js', '!./dev/js/all.js'], ['concat-js']);
+  gulp.watch(`${DEV_ROOT}/less/*.less`, ['less']);
+  gulp.watch([`${CSS_ROOT}/*.css`, `!${CSS_ROOT}/all.css`], ['concat-css']);
+  gulp.watch([`${JS_ROOT}/*.js`, `!${JS_ROOT}/all.js`], ['concat-js']);
 });
 
 gulp.task('concat-js', function () {
-  del.sync(['./dev/js/all.js']);
-  return gulp.src(['dev/js/jquery.js', 'dev/js/wow.min.js', 'dev/js/bootstrap.min.js', './dev/js/*.js'])
+  del.sync([`${JS_ROOT}/all.js`]);
+  return gulp.src([`${JS_ROOT}/jquery.js`, `${JS_ROOT}/wow.min.js`, `${JS_ROOT}/bootstrap.min.js`, './dev/js/*.js'])
     .pipe(concat('all.js'))
-    .pipe(gulp.dest('./dev/js/'));
+    .pipe(gulp.dest(JS_ROOT));
 });
 
 gulp.task('less', function () {
   // del.sync(['./dev/css/creative.css']);
   return gulp.src('./dev/less/meliora.less')
     .pipe(less())
-    .pipe(gulp.dest('./dev/css/'));
+    .pipe(gulp.dest(CSS_ROOT));
 });
 
 gulp.task('concat-css', function () {
-  del.sync(['./dev/css/all.css']);
-  return gulp.src('./dev/css/*.css')
+  del.sync([`${CSS_ROOT}/all.css`]);
+  return gulp.src(`${CSS_ROOT}/*.css`)
     .pipe(concat('all.css'))
-    .pipe(gulp.dest('./dev/css/'));
+    .pipe(gulp.dest(CSS_ROOT));
 });
 
 gulp.task('serve', serve({
   root: ['dev'],
   port: 8000
 }));
+
+gulp.task('serve-prod', ['serve-deploy']);
 
 gulp.task('serve-deploy', serve({
   root: ['deploy'],
@@ -46,44 +55,50 @@ gulp.task('serve-deploy', serve({
 
 
 gulp.task('uglifyjs-deploy', function () {
-  del.sync(['./deploy/js']);
-  return gulp.src('./dev/js/all.js')
+  del.sync([`${PROD_ROOT}/js`]);
+  return gulp.src(`${JS_ROOT}/all.js`)
     .pipe(uglify())
-    .pipe(gulp.dest('./deploy/js'));
+    .pipe(gulp.dest(`${PROD_ROOT}/js`));
 });
 
 gulp.task('uglifycss-deploy', function () {
-  del.sync(['./deploy/css']);
-  return gulp.src('./dev/css/all.css')
+  del.sync([`${PROD_ROOT}/css`]);
+  return gulp.src(`${CSS_ROOT}/all.css`)
     .pipe(cleanCSS())
-    .pipe(gulp.dest('./deploy/css'));
+    .pipe(gulp.dest(`${PROD_ROOT}/css`));
 });
 gulp.task('deploy-img', function () {
-  del.sync(['./deploy/img']);
-  return gulp.src('./dev/img/**/*.*')
-    .pipe(gulp.dest('./deploy/img'));
+  del.sync([`${PROD_ROOT}/img`]);
+  return gulp.src(`${DEV_ROOT}/img/**/*.*`)
+    .pipe(gulp.dest(`${PROD_ROOT}/img`));
 });
 gulp.task('deploy-font', function () {
-  del.sync(['./deploy/fonts']);
-  return gulp.src('./dev/fonts/**/*.*')
-    .pipe(gulp.dest('./deploy/fonts'));
+  del.sync([`${PROD_ROOT}/fonts`]);
+  return gulp.src(`${DEV_ROOT}/fonts/**/*.*`)
+    .pipe(gulp.dest(`${PROD_ROOT}/fonts`));
 });
+gulp.task('minifyHTML', function() {
+  return gulp.src(`${DEV_ROOT}/**/*.html`)
+    .pipe(minifyHTML({
+      "collapseWhitespace": true,
+      "minifyCSS": true,
+      "minifyJS": true,
+      "removeComments": true
+    }))
+    .pipe(gulp.dest(PROD_ROOT));
+});;
 
 gulp.task('clean', function () {
-  return del.sync('./deploy');
+  return del.sync(PROD_ROOT);
 });
 
 gulp.task('deploy', ['build']); /// alias, because I know I'll do both
 
-gulp.task('build', ['clean', 'less', 'deploy-img', 'deploy-font', 'uglifyjs-deploy', 'uglifycss-deploy'], function () { /// then copy stuff!
-  del.sync(['./deploy/index.html']);
-  del.sync(['./deploy/favicon.ico']);
-  gulp.src('./dev/portfolio/**.*')
-    .pipe(gulp.dest('./deploy/portfolio'));
-  gulp.src('./dev/robots.txt')
-    .pipe(gulp.dest('./deploy'));
-  gulp.src('./dev/favicon.ico')
-    .pipe(gulp.dest('./deploy'));
-  return gulp.src('./dev/index.html')
-    .pipe(gulp.dest('./deploy'));
+gulp.task('build', ['clean', 'less', 'deploy-img', 'deploy-font', 'uglifyjs-deploy', 'uglifycss-deploy', 'minifyHTML'], function () { /// then copy stuff!
+  gulp.src(`${DEV_ROOT}/portfolio/**.*`)
+    .pipe(gulp.dest(`${PROD_ROOT}/portfolio`));
+  gulp.src(`${DEV_ROOT}/robots.txt`)
+    .pipe(gulp.dest(PROD_ROOT));
+  return gulp.src(`${DEV_ROOT}/favicon.ico`)
+    .pipe(gulp.dest(PROD_ROOT));
 });
