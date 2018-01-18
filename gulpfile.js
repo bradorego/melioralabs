@@ -122,12 +122,14 @@ gulp.task('clean', function () {
 gulp.task('deploy', ['build']); /// alias, because I know I'll do both
 
 gulp.task('prebuild', ['nunjucks', 'sass', 'concat-js', 'concat-css']);
-gulp.task('build', [], function () { /// then copy stuff!
-  runSequence('prebuild', 'clean', 'deploy-img', 'deploy-font', 'uglifyjs-deploy', 'uglifycss-deploy', 'minifyHTML');
+gulp.task('deploy-copy', [], () => {
   gulp.src(`${DEV_ROOT}/portfolio/**.*`)
     .pipe(gulp.dest(`${PROD_ROOT}/portfolio`));
   gulp.src(`${DEV_ROOT}/robots.txt`)
     .pipe(gulp.dest(PROD_ROOT));
   return gulp.src(`${DEV_ROOT}/favicon.ico`)
     .pipe(gulp.dest(PROD_ROOT));
+});
+gulp.task('build', [], function () { /// then copy stuff!
+  runSequence('prebuild', 'clean', 'deploy-img', 'deploy-font', 'uglifyjs-deploy', 'uglifycss-deploy', 'minifyHTML', 'deploy-copy');
 });
