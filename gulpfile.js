@@ -17,7 +17,7 @@ const DEV_ROOT = './dev',
   SCSS_ROOT = `${DEV_ROOT}/scss`;
 
 // define tasks here
-gulp.task('default', ['sass', 'concat-js', 'concat-css', 'serve'], function () {
+gulp.task('default', ['sass', 'nunjucks', 'concat-js', 'concat-css', 'serve'], function () {
   gulp.watch(`${DEV_ROOT}/nunjucks/**/*.njs`, ['nunjucks']);
   gulp.watch(`${SCSS_ROOT}/*.scss`, ['sass']);
   gulp.watch([`${CSS_ROOT}/*.css`, `!${CSS_ROOT}/all.css`], ['concat-css']);
