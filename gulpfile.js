@@ -45,7 +45,7 @@ gulp.task('vendor', function() {
     .pipe(gulp.dest(`${VENDOR_ROOT}/jquery`))
 
   // Vide.js
-  gulp.src(['./node_modules/vide/dist/*'])
+  return gulp.src(['./node_modules/vide/dist/*'])
     .pipe(gulp.dest(`${VENDOR_ROOT}/vide`))
 
 });
@@ -174,9 +174,17 @@ gulp.task('clean', () => {
   return del.sync(PROD_ROOT);
 });
 
-gulp.task('prebuild', ['nunjucks', 'css', 'js']);
+gulp.task('prebuild', () => {
+  runSequence('vendor', 'nunjucks', 'css', 'js');
+});
 gulp.task('build', () => {
   runSequence('prebuild', 'clean', 'minifyHTML', 'copy-img', 'copy-css', 'copy-js', 'copy-vendor', 'copy-video', 'copy-font' )
+  gulp.src(`${DEV_ROOT}/robots.txt`)
+    .pipe(gulp.dest(PROD_ROOT));
+  gulp.src(`${DEV_ROOT}/portfolio/**`, {
+    dot: true
+  })
+    .pipe(gulp.dest(`${PROD_ROOT}/portfolio`));
   return gulp.src(`${DEV_ROOT}/favicon.ico`)
     .pipe(gulp.dest(PROD_ROOT));
 });
@@ -184,7 +192,7 @@ gulp.task('build', () => {
 gulp.task('default', ['dev']);
 
 // Watch task
-gulp.task('dev', ['nunjucks', 'css', 'js', 'serve'], function() {
+gulp.task('dev', ['vendor', 'nunjucks', 'css', 'js', 'serve'], function() {
   gulp.watch(`${DEV_ROOT}/nunjucks/**/*.njs`, ['nunjucks']);
   gulp.watch(`${SCSS_ROOT}/*.scss`, ['css']);
   gulp.watch(`${JS_ROOT}/*.js`, ['js']);
