@@ -22,7 +22,6 @@ const VENDOR_ROOT = `${DEV_ROOT}/vendor`;
 
 // Copy third-party dependencies from /node_modules into /vendor
 gulp.task('vendor', function() {
-  del.sync(VENDOR_ROOT);
   // boostrap scss
   gulp.src(['./node_modules/bootstrap/scss/**/*'])
     .pipe(gulp.dest(`${VENDOR_ROOT}/bootstrap/scss`));
