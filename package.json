@@ -1,33 +1,51 @@
 {
-  "name": "melioralabs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "title": "Coming Soon",
+  "name": "startbootstrap-coming-soon",
+  "version": "4.0.0-beta.2",
+  "description": "Coming Soon is a Bootstrap 4 coming soon page theme.",
+  "keywords": [
+    "css",
+    "sass",
+    "html",
+    "responsive",
+    "theme",
+    "template"
+  ],
+  "homepage": "https://startbootstrap.com/template-overviews/coming-soon",
+  "bugs": {
+    "url": "https://github.com/BlackrockDigital/startbootstrap-coming-soon/issues",
+    "email": "feedback@startbootstrap.com"
   },
+  "license": "MIT",
+  "author": "Start Bootstrap",
+  "contributors": [
+    "David Miller (http://davidmiller.io/)"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://bradorego@bitbucket.org/bradorego/melioralabs.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://bitbucket.org/bradorego/melioralabs#readme",
-  "devDependencies": {
-    "del": "^2.2.0",
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.3",
-    "gulp-concat": "^2.6.0",
-    "gulp-minify-html": "^1.0.6",
-    "gulp-rev": "^7.0.0",
-    "gulp-uglify": "^1.5.3",
-    "gulp-usemin": "^0.3.23",
-    "browser-sync": "^2.23.5",
-    "gulp-htmlmin": "^4.0.0",
-    "gulp-nunjucks-render": "^2.2.2",
-    "gulp-sass": "^3.1.0",
-    "run-sequence": "^2.2.1"
+    "url": "https://github.com/BlackrockDigital/startbootstrap-coming-soon.git"
   },
   "dependencies": {
+    "bootstrap": "^4.0.0-beta.2",
+    "font-awesome": "4.7.0",
+    "jquery": "^3.2.1",
+    "vide": "^0.5.1"
+  },
+  "devDependencies": {
+    "browser-sync": "2.18.13",
+    "del": "^3.0.0",
+    "eslint-config-standard": "^11.0.0-beta.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "3.9.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-nunjucks-render": "^2.2.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify-es": "^1.0.0",
+    "run-sequence": "^2.2.1"
   }
 }

@@ -1,0 +1,74 @@
+.masthead {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  overflow-y: scroll;
+  .masthead-bg {
+    background-color: fade-out($primary, 0.2);
+  }
+  .masthead-content {
+    p {
+      font-size: 1.2rem;
+      strong {
+        font-weight: 700;
+      }
+    }
+    .input-group-newsletter {
+      input {
+        font-size: 1rem;
+        padding: 1rem;
+      }
+      button {
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 1rem;
+      }
+    }
+  }
+  h1, h2 {
+    margin: 2rem 0;
+  }
+  a {
+    color: $secondary;
+  }
+}
+
+.faq {
+  h3 {
+    margin: 1.75rem 0 0.25rem;
+    font-size: 1.25rem;
+  }
+}
+.logos {
+  img {
+    width: 100%;
+  }
+  a {
+    margin-bottom: 1rem;
+  }
+}
+
+.ml-list {
+  padding-left: 0;
+  font-size: 1.2rem;
+  list-style-position: inside;
+}
+
+@media (min-width: 768px) {
+  .masthead {
+    // height: 100%;
+    width: 40.5rem;
+  }
+  .logos {
+    img {
+      width: 80%;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .masthead {
+    width: 60rem;
+  }
+}

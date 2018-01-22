@@ -1,8 +1,7 @@
-{% include "partials/header.njs" %}
+{% include "partials/page-head.njs" %}
 <body id="page-top" class="index">
   {% block content %} {% endblock %}
 
-  {% include "partials/footer.njs" %}
   {% include "partials/page-js.njs" %}
 </body>
 </html>
