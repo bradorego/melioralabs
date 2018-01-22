@@ -1,4 +1,3 @@
 node_modules
-*.sublime*
-dev/**/*.html
 dev/css
+dev/**/*.html
