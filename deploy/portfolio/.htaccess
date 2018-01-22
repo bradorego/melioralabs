@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "MelioraLabs Portfolio"
+AuthUserFile /fs8d/melioralabs/protected/portfolio-secret
+
+require valid-user
