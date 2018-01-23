@@ -12,6 +12,8 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="MelioraLabs provides a la carte usability research facilities and services in NYC. From renting the lab to full service research design and analysis, you decide how much help you need." />
     <meta property="og:image" content="https://melioralabs.com/img/bg-mobile-fallback.jpg" />
+    <meta property="og:url" content="https://melioralabs.com" />
+    <meta property="fb:app_id" content="" />
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="MelioraLabs - Practical UX Research" />
