@@ -14,7 +14,7 @@
   </p>
   <h3>How do I book my times?</h3>
   <p>
-    Right now, maually (email). Eventually, something like Calendly.
+    Right now, manually (email). Eventually, something like Calendly.
   </p>
   <h3>How do I get my materials (videos, reports, etc)?</h3>
   <p>
@@ -26,7 +26,7 @@
   </p>
   <h3>Do you do other work (surveys, design, etc)?</h3>
   <p>
-    MelioraLabs team members are available for freelance work, but ML itself is not a full-service agency. We're just here to make in-person usability research cheaper, easier, and more accesible. If you're interested in freelance work, <a href="mailto:hello@melioralabs.com?subject=I%20want%20to%20hire%20you">reach out to us</a>.
+    MelioraLabs team members are available for freelance work, but ML itself is not a full-service agency. We're just here to make in-person usability research cheaper, easier, and more accessible. If you're interested in freelance work, <a href="mailto:hello@melioralabs.com?subject=I%20want%20to%20hire%20you">reach out to us</a>.
   </p>
   <h3>What's with the name?</h3>
   <p>

@@ -8,8 +8,8 @@
   <a href="https://100state.com" class="col-6 col-xl-4">
     <img src="img/clients/100state.png" class="img-responsive img-centered" alt="">
   </a>
-  <a href="http://candorem.com" class="col-6 col-xl-4">
-    <img src="img/clients/candorem.png" class="img-responsive img-centered" alt="">
+  <a href="http://thermastor.com" class="col-6 col-xl-4">
+    <img src="img/clients/thermastor.png" class="img-responsive img-centered" alt="">
   </a>
   <a href="http://spectrumbrands.com" class="col-6 col-xl-4">
     <img src="img/clients/spectrum.png" class="img-responsive img-centered" alt="">
