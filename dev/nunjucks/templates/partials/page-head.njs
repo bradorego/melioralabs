@@ -5,8 +5,21 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="MelioraLabs provides a la carte usability research facilities and services in NYC. From renting the lab to full service research design and analysis, you decide how much help you need.">
+
+    <meta property="og:title" content="MelioraLabs - Practical UX Research" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="MelioraLabs provides a la carte usability research facilities and services in NYC. From renting the lab to full service research design and analysis, you decide how much help you need." />
+    <meta property="og:image" content="https://melioralabs.com/img/bg-mobile-fallback.jpg" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="MelioraLabs - Practical UX Research" />
+    <meta name="twitter:description" content="MelioraLabs provides a la carte usability research facilities and services in NYC. From renting the lab to full service research design and analysis, you decide how much help you need." />
+    <meta name="twitter:image" content="https://melioralabs.com/img/bg-mobile-fallback.jpg" />
+
+
+
 
     <title>MelioraLabs - Practical UX Research</title>
     <base target="_blank">
