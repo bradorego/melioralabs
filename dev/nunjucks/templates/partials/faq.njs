@@ -24,6 +24,10 @@
   <p>
     Our mission is to make usability more accessible and get more companies integrating research into their product development process. We've seen dozens of companies roll out products that fall flat on their face, and a little usability research here and there could've helped avoid those pitfalls.
   </p>
+  <h3>Are there any discounts available (e.g. for startups)?</h3>
+  <p>
+    Frankly, not really. This is already the cheapest option by far, and the base price is just enough to cover materials (office space, cameras, storage, etc), so if we go any cheaper we'll be losing money. We can have a conversation about volume discounts (realistic utlization percentage is part of the feasibility calculation), but as it stands, the prices are as is.
+  </p>
   <h3>Do you do other work (surveys, design, etc)?</h3>
   <p>
     MelioraLabs team members are available for freelance work, but ML itself is not a full-service agency. We're just here to make in-person usability research cheaper, easier, and more accessible. If you're interested in freelance work, <a href="mailto:hello@melioralabs.com?subject=I%20want%20to%20hire%20you">reach out to us</a>.
