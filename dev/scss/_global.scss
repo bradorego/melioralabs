@@ -27,3 +27,10 @@ body {
   opacity: 0.75;
   z-index: -1;
 }
+
+#upsell {
+  .btn {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
