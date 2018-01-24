@@ -35,19 +35,21 @@
     <link href="css/coming-soon.min.css" rel="stylesheet">
 
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-36860431-2', 'auto');
-      ga('send', 'pageview');
+      if (!window.location.href.includes("localhost") || document.cookie.includes("bjo_no_fullstory")) { ///only start fullstory if not local/not me
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-36860431-2', 'auto');
+        ga('send', 'pageview');
+      }
     </script>
     <script>
       window['_fs_debug'] = false;
       window['_fs_host'] = 'fullstory.com';
       window['_fs_org'] = '9Y17Y';
       window['_fs_namespace'] = 'FS';
-      if (!window.location.href.includes("localhost")) { ///only start fullstory if not local
+      if (!window.location.href.includes("localhost") || document.cookie.includes("bjo_no_fullstory")) { ///only start fullstory if not local/not me
         (function(m,n,e,t,l,o,g,y){
             if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
             g=m[e]=function(a,b){g.q?g.q.push([a,b]):g._api(a,b);};g.q=[];
@@ -62,4 +64,14 @@
         })(window,document,window['_fs_namespace'],'script','user');
       }
     </script>
+    <!-- start Mixpanel -->
+    <script type="text/javascript">
+      if (!window.location.href.includes("localhost") || document.cookie.includes("bjo_no_fullstory")) { ///only start fullstory if not local/not me
+        (function(e,a){if(!a.__SV){var b=window;try{var c,l,i,j=b.location,g=j.hash;c=function(a,b){return(l=a.match(RegExp(b+"=([^&]*)")))?l[1]:null};g&&c(g,"state")&&(i=JSON.parse(decodeURIComponent(c(g,"state"))),"mpeditor"===i.action&&(b.sessionStorage.setItem("_mpcehash",g),history.replaceState(i.desiredHash||"",e.title,j.pathname+j.search)))}catch(m){}var k,h;window.mixpanel=a;a._i=[];a.init=function(b,c,f){function e(b,a){var c=a.split(".");2==c.length&&(b=b[c[0]],a=c[1]);b[a]=function(){b.push([a].concat(Array.prototype.slice.call(arguments,
+        0)))}}var d=a;"undefined"!==typeof f?d=a[f]=[]:f="mixpanel";d.people=d.people||[];d.toString=function(b){var a="mixpanel";"mixpanel"!==f&&(a+="."+f);b||(a+=" (stub)");return a};d.people.toString=function(){return d.toString(1)+".people (stub)"};k="disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user".split(" ");
+        for(h=0;h<k.length;h++)e(d,k[h]);a._i.push([b,c,f])};a.__SV=1.2;b=e.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL?MIXPANEL_CUSTOM_LIB_URL:"file:"===e.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";c=e.getElementsByTagName("script")[0];c.parentNode.insertBefore(b,c)}})(document,window.mixpanel||[]);
+        mixpanel.init("74a091385e01345aaa09647f1202d1d0");
+      }
+    </script>
+    <!-- end Mixpanel -->
   </head>
