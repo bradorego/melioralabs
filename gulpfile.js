@@ -100,7 +100,8 @@ gulp.task('serve', function() {
   browserSync.init({
     server: {
       baseDir: DEV_ROOT
-    }
+    },
+    open: false
   });
 });
 
