@@ -2,3 +2,4 @@ node_modules
 dev/css
 dev/**/*.html
 dev/vendor
+deploy
