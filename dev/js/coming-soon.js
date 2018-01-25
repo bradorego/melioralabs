@@ -92,37 +92,48 @@
       mixpanel.track('sendEmail', {
         status: 'beforeSend'
       });
-      $.ajax({
-        url: "https://api.sendgrid.com/api/mail.send.json",
-        type: "GET",
-        data: {
-          api_user: "melioralabs",
-          api_key: "TestWord1",
-          to: `brad@melioralabs.com`,
-          from: to,
-          subject: "MelioraLabs Inquiry",
-          html: body
-        },
-        dataType:"jsonp",
-        cache: false,
-        success: processSuccess,
-        error: function(err) {
-          console.log(err);
-          if (err.status === 200) { /// jklol actually a success
-            return processSuccess();
-          }
-          // Fail message
-          successDiv.html(`
+      if (to) {
+        successDiv.html('');
+        successDiv.off('click');
+        $.ajax({
+          url: "https://api.sendgrid.com/api/mail.send.json",
+          type: "GET",
+          data: {
+            api_user: "melioralabs",
+            api_key: "TestWord1",
+            to: `brad@melioralabs.com`,
+            from: to,
+            subject: "MelioraLabs Inquiry",
+            html: body
+          },
+          dataType:"jsonp",
+          cache: false,
+          success: processSuccess,
+          error: function(err) {
+            console.log(err);
+            if (err.status === 200) { /// jklol actually a success
+              return processSuccess();
+            }
+            // Fail message
+            successDiv.html(`
+              <div class='alert alert-danger mt-3'>
+                <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times</button>
+                Whoops! Looks like something went wrong. If the problem persists, please email <a href='mailto:hello@melioralabs.com?subject=Your%20Site%20Is%20Broken'>hello@melioralabs.com</a>.
+              </div>`
+            );
+            mixpanel.track('sendEmail', {
+              status: 'fail'
+            });
+          },
+        });
+      } else {
+        successDiv.html(`
             <div class='alert alert-danger mt-3'>
               <button type='button' class='close' data-dismiss='alert' aria-hidden='true'>&times</button>
-              Whoops! Looks like something went wrong. If the problem persists, please email <a href='mailto:hello@melioralabs.com?subject=Your%20Site%20Is%20Broken'>hello@melioralabs.com</a>.
+              Email Address required. We need a way to get in contact with you :)
             </div>`
           );
-          mixpanel.track('sendEmail', {
-            status: 'fail'
-          });
-        },
-      });
+      }
     };
 
   $('#ml-submit').click(() => {
