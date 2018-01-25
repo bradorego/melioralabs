@@ -3,11 +3,21 @@
         <div class="row h-100 p-5">
           <div class="col-12 my-auto">
             <div class="masthead-content text-white">
-              {% include "partials/main-text.njs" %}
-              {% include "partials/price-form.njs" %}
-              {% include "partials/clients.njs" %}
-              {% include "partials/faq.njs" %}
-              {% include "partials/cta.njs" %}
+              <section>
+                {% include "partials/main-text.njs" %}
+              </section>
+              <section>
+                {% include "partials/price-form.njs" %}
+              </section>
+              <section>
+                {% include "partials/clients.njs" %}
+              </section>
+              <section>
+                {% include "partials/faq.njs" %}
+              </section>
+              <section>
+                {% include "partials/cta.njs" %}
+              </section>
             </div>
           </div>
         </div>
