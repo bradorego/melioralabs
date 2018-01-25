@@ -6,7 +6,7 @@
   </p>
   <h3>What does renting the lab entail?</h3>
   <p>
-    Because we work out of coworking spaces, you won't have a completely private experience. We rent 2-5 person private offices (depending on the facility) to run study sessions. Labs will be equipped with chairs, a desk/table, at least two cameras (one for the screen, one for the room/user), and various mounting options for those cameras. An attendant will be at the lab/in the coworking space during your reservation in case you have issues.
+    Because we work out of coworking spaces, you won't have a completely private experience. We rent 2-5 person private offices (depending on the facility) to run study sessions. Labs will be equipped with chairs, a desk/table, at least two cameras (one for the screen, one for the room/user), and various mounting options for those cameras. An attendant will be at the lab/in the coworking space during your reservation in case you have issues. Lab sessions are for one hour (60 minutes). If your study requires more than that per participant, you'll need to book additional time.
   </p>
   <h3>Why do things like design and analysis (a one-time activity) scale with participants?</h3>
   <p>
