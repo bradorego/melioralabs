@@ -26,7 +26,7 @@
   </p>
   <h3>Are there any discounts available (e.g. for startups)?</h3>
   <p>
-    Frankly, not really. This is already the cheapest option by far, and the base price is just enough to cover materials (office space, cameras, storage, etc), so if we go any cheaper we'll be losing money. We can have a conversation about volume discounts (realistic utlization percentage is part of the feasibility calculation), but as it stands, the prices are as is.
+    Frankly, not really. This is already the cheapest option by far, and the base price is just enough to cover materials (office space, cameras, storage, etc), so if we go any cheaper we'll be losing money. We can have a conversation about volume discounts (realistic utilization percentage is part of the feasibility calculation), but as it stands, the prices are as is.
   </p>
   <h3>Do you do other work (surveys, design, etc)?</h3>
   <p>
