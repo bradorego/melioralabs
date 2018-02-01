@@ -133,6 +133,9 @@
               Email Address required. We need a way to get in contact with you :)
             </div>`
           );
+        mixpanel.track('sendEmail', {
+          status: 'no-email'
+        });
       }
     };
 
