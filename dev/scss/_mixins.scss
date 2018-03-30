@@ -7,6 +7,13 @@
   background-size: cover;
 }
 
+@mixin background-image($url) {
+  @include background-cover;
+  background-image: url($url);
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
 // Font Mixins
 @mixin body-font {
   font-family: 'Source Sans Pro';

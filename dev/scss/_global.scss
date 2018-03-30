@@ -17,6 +17,7 @@ body {
   height: 100%;
   position: relative;
   @include body-font;
+  @include background-image($bg-url);
 }
 
 .overlay {
