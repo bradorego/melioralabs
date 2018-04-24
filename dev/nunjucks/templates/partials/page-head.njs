@@ -29,10 +29,10 @@
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/coming-soon.min.css" rel="stylesheet">
+    <link href="/css/coming-soon.min.css" rel="stylesheet">
 
     <script>
       if (!window.location.href.includes("localhost") && !document.cookie.includes("bjo_no_fullstory")) { ///only start fullstory if not local/not me
