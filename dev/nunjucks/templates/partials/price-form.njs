@@ -2,7 +2,7 @@
   <form class="card text-dark" id="ml-form">
     <div class="card-body">
       <div class="form-group">
-        <h4>Participants:<output id="part-output">10</output><span id="part-plus">+</span></h4>
+        <h4>Sessions:<output id="part-output">10</output><span id="part-plus">+</span></h4>
         <input id="participants" type="range" step="1" min="1" max="30" value="10" />
       </div>
       <div class="form-check mp-track-click" data-mp-value="lab">
