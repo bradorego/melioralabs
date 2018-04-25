@@ -23,32 +23,7 @@
     bootstrapSize = window.innerWidth >= 1200 ? 'xl' : window.innerWidth >= 922 ? 'lg' : window.innerWidth >= 768 ? 'md' : window.innerWidth >= 576 ? 'sm' : 'xs',
     $masthead = $('.masthead').eq(0),
     $section = $('section'),
-    scrollPoints = {
-      'mainText': {
-        hit: false,
-        distance: $section.get(0).offsetTop
-      },
-      'pricing': {
-        hit: false,
-        distance: $section.get(1).offsetTop
-      },
-      'customers': {
-        hit: false,
-        distance: $section.get(2).offsetTop
-      },
-      'faq': {
-        hit: false,
-        distance: $section.get(3).offsetTop
-      },
-      'cta': {
-        hit: false,
-        distance: $section.get(4).offsetTop
-      },
-      'bottom': {
-        hit: false,
-        distance: $masthead[0].scrollHeight - $masthead.height()
-      },
-    },
+    scrollPoints = {},
     $mpTrackClick = $('.mp-track-click'),
     calculateTotal = () => {
       let participants = $partRange.val(),
@@ -137,7 +112,7 @@
           status: 'no-email'
         });
       }
-    };
+  };
 
   $('#ml-submit').click(() => {
     $mlForm.submit();
@@ -201,7 +176,11 @@
     mixpanel.track('click', {
       href: href
     });
-    window.open(href);
+    if (e.target.target==="_self") {
+      window.location = href;
+    } else {
+      window.open(href);
+    }
   });
 
   $mpTrackClick.click((e) => {
@@ -214,6 +193,36 @@
       target: mpValue
     });
   });
+
+
+  if ($section.length) {
+    scrollPoints = {
+      'mainText': {
+        hit: false,
+        distance: $section.get(0).offsetTop
+      },
+      'pricing': {
+        hit: false,
+        distance: $section.get(1).offsetTop
+      },
+      'customers': {
+        hit: false,
+        distance: $section.get(2).offsetTop
+      },
+      'faq': {
+        hit: false,
+        distance: $section.get(3).offsetTop
+      },
+      'cta': {
+        hit: false,
+        distance: $section.get(4).offsetTop
+      },
+      'bottom': {
+        hit: false,
+        distance: $masthead[0].scrollHeight - $masthead.height()
+      },
+    };
+  }
 
   $masthead.scroll(() => {
     $.each(scrollPoints, (key, item) => {
