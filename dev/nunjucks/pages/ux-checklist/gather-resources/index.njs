@@ -1,9 +1,12 @@
 {% extends "layout.njs" %}
+{% import "macros/figure.njs" as figure %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/top-view-photography-of-smartphones-and-papers-on-white-surface-926987/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Gather Resources</h1>
-  <h5 class="mb-5">Make sure you have everything you need to get started, including people resources, paperwork, and facilities.</h3>
+  <h5 class="mb-3">Make sure you have everything you need to get started, including people resources, paperwork, and facilities.</h3>
+
+  {{ figure.insertShare("/img/blog/ux-checklist/1-gather.jpg", "View Full Size", "/img/blog/ux-checklist/1-gather.jpg", "https://melioralabs.com/ux-checklist/gather-resources/") }}
 
   <p>Before you even get around to figuring out what to test and how, you need to make sure you have the right facilities. Being able to record the entire testing room (primarily so you can see user’s reactions outside of the software and without being too intrusive) is critical, and having a dedicated, private space (even if it’s normally just a meeting room) is also important.</p>
 

@@ -1,9 +1,13 @@
 {% extends "layout.njs" %}
+{% import "macros/figure.njs" as figure %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/man-wearing-black-and-white-stripe-shirt-looking-at-white-printer-papers-on-the-wall-212286/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Analyze Results</h1>
-  <h5 class="mb-5">Data is just data at the end of the day. It needs analysis to bring it to life.</h3>
+  <h5 class="mb-3">Data is just data at the end of the day. It needs analysis to bring it to life.</h3>
+
+  {{ figure.insertShare("/img/blog/ux-checklist/6-analyze.jpg", "View Full Size", "/img/blog/ux-checklist/6-analyze.jpg", "https://melioralabs.com/ux-checklist/analyze-results/") }}
+
 
   <p>Just as a task without a hypothesis is incomplete, gathering all of this data without analyzing it doesn’t serve much good, either. There are many ways to slice, summarize, group, and digest data, and the best way to do so will depend on exactly what’s being tested (are you comparing two designs for efficiency? are you testing a new design for completion?), but there a few general ways to organize data.</p>
 

@@ -1,9 +1,12 @@
 {% extends "layout.njs" %}
+{% import "macros/figure.njs" as figure %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/macbook-air-apple-pen-notes-7377/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Prepare the Study</h1>
-  <h5 class="mb-5">Make sure you have everything you need for sessions to run smoothly.</h3>
+  <h5 class="mb-3">Make sure you have everything you need for sessions to run smoothly.</h3>
+
+  {{ figure.insertShare("/img/blog/ux-checklist/3-prepare.jpg", "View Full Size", "/img/blog/ux-checklist/3-prepare.jpg", "https://melioralabs.com/ux-checklist/prepare-study/") }}
 
   <p>Now that you have everything planned out, you need to actually go out and do the prep work. Print out all the materials you’ll need (and some extras, just in case) ahead of time. Develop and write out instructions for the facilitators — even if you’re running it yourself, this is a really good exercise in making sure you have a consistent protocol with each participant.</p>
 

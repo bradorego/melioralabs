@@ -1,9 +1,12 @@
 {% extends "layout.njs" %}
+{% import "macros/figure.njs" as figure %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/computer-desk-electronics-indoors-374074/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Run Study Sessions</h1>
-  <h5 class="mb-5">This is where the magic happens. Bring real people into the lab to interact with the product.</h3>
+  <h5 class="mb-3">This is where the magic happens. Bring real people into the lab to interact with the product.</h3>
+
+  {{ figure.insertShare("/img/blog/ux-checklist/5-run.jpg", "View Full Size", "/img/blog/ux-checklist/5-run.jpg", "https://melioralabs.com/ux-checklist/run-study/") }}
 
   <p>Now comes the fun part. You’ve done all the design and prep work; you’ve found, screened, and scheduled your participants; now you actually have to run the study. This might seem like the easy part but it’s far from it.</p>
 
