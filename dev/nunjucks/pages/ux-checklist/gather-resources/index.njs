@@ -23,7 +23,7 @@
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {
-      document.body.style.backgroundImage = "url('/img/blog/resources.jpg')";
+      document.body.style.backgroundImage = "url('/img/blog/ux-checklist/resources.jpg')";
     });
   </script>
 {% endblock %}

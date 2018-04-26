@@ -25,7 +25,7 @@
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {
-      document.body.style.backgroundImage = "url('/img/blog/participants.jpg')";
+      document.body.style.backgroundImage = "url('/img/blog/ux-checklist/participants.jpg')";
     });
   </script>
 {% endblock %}
