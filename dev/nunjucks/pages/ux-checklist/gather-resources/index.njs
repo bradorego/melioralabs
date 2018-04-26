@@ -15,6 +15,8 @@
 
   <p>Don’t forget about paperwork, too - consent forms, NDAs (if you’re showing anything confidential), and video release forms (letting people know you’re recording them for research purposes). You can put all of this into one form so the user isn’t overwhelmed with things to sign; usability.gov actually has a <a href="https://www.usability.gov/how-to-and-tools/resources/templates/consent-recording-release-form-adult.html">really nice template</a> you can adapt.</p>
 
+  <p>It's important to think about resources beyond the physical needs. What people resources are you going to need? Whose time and energy will be supporting this? You may need test accounts, funding, time away from your other duties, etc., and getting whatever stakeholders involved aligned on those needs is important. We recommend having a separate WiFi network for users to connect to when testing as well, which will probably need some support.</p>
+
   {{ prevNext.buttons(
     "/ux-checklist/",
     "Usability Research Checklist",
