@@ -1,5 +1,5 @@
 <h2>Not ready yet? Join the email list.</h2>
-<p>We'll send you no more than 2 emails a month with news, tips & tricks, and other UX Research content.</p>
+<p>We understand; maybe you don't have any projects that are ready. Maybe you don't trust us. All in due time. Join the mailing list and we'll send you no more than 2 emails a month with news, tips & tricks, and other UX Research content, and when you are ready, we'll be here.</p>
 <!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
   <form action="https://melioralabs.us13.list-manage.com/subscribe/post?u=47b637469fe9207559b59e168&amp;id=4c78b2dc91" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate id="upsell">
