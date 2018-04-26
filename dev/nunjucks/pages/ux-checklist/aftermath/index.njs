@@ -1,9 +1,12 @@
 {% extends "layout.njs" %}
+{% import "macros/figure.njs" as figure %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/background-beverage-breakfast-brown-414645/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Aftermath</h1>
-  <h5 class="mb-5">How to reflect on your work and prepare it for presentation.</h3>
+  <h5 class="mb-3">How to reflect on your work and prepare it for presentation.</h3>
+
+  {{ figure.insertShare("/img/blog/ux-checklist/7-aftermath.jpg", "View Full Size", "/img/blog/ux-checklist/7-aftermath.jpg", "https://melioralabs.com/ux-checklist/aftermath/") }}
 
   <p>If you have hopes of ever doing this again, you’ll need to find a way to make your findings (and recommendations) presentable and actionable. Usability research for its own sake is a wonderful thing, but more likely than not there are stakeholders who allocated funds for this and they’ll want some sort of return. That return comes in the analysis and presentation of what you found.</p>
 

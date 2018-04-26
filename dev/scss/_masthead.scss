@@ -41,6 +41,22 @@
     top: -40px;
     right: -40px;
   }
+  figure {
+    img {
+      width: 100%;
+    }
+    figcaption {
+      text-align: right;
+      font-size: 0.75rem;
+      a {
+        border: 1px solid #cca700;
+        border-top: none;
+        border-bottom: none;
+        padding: 0px 6px;
+        margin-left: -4px;
+      }
+    }
+  }
 }
 
 .faq {
