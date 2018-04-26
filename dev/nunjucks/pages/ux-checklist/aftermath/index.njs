@@ -1,5 +1,6 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
+{% import "macros/prevNext.njs" as prevNext %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/background-beverage-breakfast-brown-414645/" class="photo-credit">Photo Credit</a>
@@ -14,15 +15,12 @@
 
   <p>A fringe benefit to doing research like this is the opportunity to publicize your findings. If you’re studying something that can be generalized, doing so in a whitepaper or a blog post can help the community and start to make a name for the brand as one that cares about users. If nothing else, letting your current users/customers know that you’re working to make the product better should earn some brownie points.</p>
 
-  <div class="row" role="group" aria-label="Basic example">
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/analyze-results/" target="_self">&lt; Analyze Results</a>
-    </div>
-    <div class="col"></div>
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/" target="_self">Get Started with MelioraLabs</a>
-    </div>
-  </div>
+
+  {{ prevNext.buttons(
+    "/ux-checklist/analyze-results/",
+    "Analyze Results",
+    "/",
+    "Get Started with MelioraLabs") }}
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {

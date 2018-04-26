@@ -1,5 +1,6 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
+{% import "macros/prevNext.njs" as prevNext %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/computer-desk-electronics-indoors-374074/" class="photo-credit">Photo Credit</a>
@@ -18,16 +19,11 @@
 
   <p>Also, DO NOT, under any circumstance, attempt to take notes while facilitating. You’re recording these sessions for a reason. You can have a live note-taker as well, but people generally don’t like being watched, so having someone else in the room adds pressure. If you’re going to dedicate two person-hours (or half-hours) to this, you’re better off having the second hour be spent watching the video later.</p>
 
-
-  <div class="row" role="group" aria-label="Basic example">
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/recruit-participants/" target="_self">&lt; Recruit Participants</a>
-    </div>
-    <div class="col"></div>
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/analyze-results/" target="_self">Analyze Results &gt;</a>
-    </div>
-  </div>
+  {{ prevNext.buttons(
+    "/ux-checklist/recruit-participants/",
+    "Recruit Participants",
+    "/ux-checklist/analyze-results/",
+    "Analyze Results") }}
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {

@@ -1,5 +1,6 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
+{% import "macros/prevNext.njs" as prevNext %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/macbook-air-apple-pen-notes-7377/" class="photo-credit">Photo Credit</a>
@@ -14,15 +15,12 @@
 
   <p>Make sure you have whatever incentives you’re offering (check, cash, gift card) lined up, and don’t forget to get any snacks/refreshments (which I highly recommend doing, especially if your session is longer than 30 minutes or anywhere near lunchtime/midday) you might be offering to participants as well..</p>
 
-  <div class="row" role="group" aria-label="Basic example">
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/design-study/" target="_self">&lt; Design the Study</a>
-    </div>
-    <div class="col"></div>
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/recruit-participants/" target="_self">Recruit Participants &gt;</a>
-    </div>
-  </div>
+
+  {{ prevNext.buttons(
+    "/ux-checklist/design-study/",
+    "Design the Study",
+    "/ux-checklist/recruit-participants/",
+    "Recruit Participants") }}
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {

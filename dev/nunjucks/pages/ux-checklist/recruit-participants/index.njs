@@ -1,5 +1,6 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
+{% import "macros/prevNext.njs" as prevNext %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/time-lapse-photography-of-people-walking-on-pedestrian-lane-842339/" class="photo-credit">Photo Credit</a>
@@ -14,17 +15,11 @@
 
   <p>Once you have the screener set up and in place, you need to figure out how participants will sign up for a timeslot. <a href="https://calendly.com/">Calendly</a> is excellent for this, as is <a href="http://doodle.com/">Doodle</a> (though it requires a little more finagling). You’ll also need to set up reminders for participants, and provide them any instructions (e.g. directions to the testing facility).</p>
 
-
-
-  <div class="row" role="group" aria-label="Basic example">
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/prepare-study/" target="_self">&lt; Prepare the Study</a>
-    </div>
-    <div class="col"></div>
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/run-study/" target="_self">Run Study Sessions &gt;</a>
-    </div>
-  </div>
+  {{ prevNext.buttons(
+    "/ux-checklist/prepare-study/",
+    "Prepare the Study",
+    "/ux-checklist/run-study/",
+    "Run Study Sessions") }}
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {

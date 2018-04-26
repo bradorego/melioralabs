@@ -1,5 +1,6 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
+{% import "macros/prevNext.njs" as prevNext %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/schedule-planning-startup-launching-7376/" class="photo-credit">Photo Credit</a>
@@ -14,15 +15,12 @@
 
   <p>Don’t forget about incentives for participants, either. It’d be nice to think people will do this out of the good of their hearts, but more likely than not you’ll need to compensate them somehow. How much you should pay varies on how long/complex testing sessions are and how specialized your target user is. Nielsen Norman Group has a <a href="https://www.nngroup.com/articles/recruiting-test-participants-for-usability-studies/">really good overview</a>.</p>
 
-  <div class="row" role="group" aria-label="Basic example">
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/gather-resources/" target="_self">&lt; Gather Resources</a>
-    </div>
-    <div class="col"></div>
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/prepare-study/" target="_self">Prepare the Study &gt;</a>
-    </div>
-  </div>
+
+  {{ prevNext.buttons(
+    "/ux-checklist/gather-resources/",
+    "Gather Resources",
+    "/ux-checklist/prepare-study/",
+    "Prepare the Study") }}
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {

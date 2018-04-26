@@ -1,5 +1,6 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
+{% import "macros/prevNext.njs" as prevNext %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/man-wearing-black-and-white-stripe-shirt-looking-at-white-printer-papers-on-the-wall-212286/" class="photo-credit">Photo Credit</a>
@@ -15,15 +16,12 @@
 
   <p>On top of the analysis, you should offer recommendations as well. As a researcher, your job may not necessarily be to design a better solution, but pointing out areas that tripped users up and some of the common mistakes they made can help direct the design/development team. Doing so also bolsters justification for the expense of testing; I’ve saved companies millions of dollars by spending tens of thousands on usability testing.</p>
 
-  <div class="row" role="group" aria-label="Basic example">
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/run-study/" target="_self">&lt; Run Study Sessions</a>
-    </div>
-    <div class="col"></div>
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/aftermath/" target="_self">Aftermath &gt;</a>
-    </div>
-  </div>
+
+  {{ prevNext.buttons(
+    "/ux-checklist/run-study/",
+    "Run Study Sessions",
+    "/ux-checklist/aftermath/",
+    "Aftermath") }}
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {

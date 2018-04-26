@@ -1,5 +1,6 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
+{% import "macros/prevNext.njs" as prevNext %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/top-view-photography-of-smartphones-and-papers-on-white-surface-926987/" class="photo-credit">Photo Credit</a>
@@ -14,15 +15,11 @@
 
   <p>Don’t forget about paperwork, too - consent forms, NDAs (if you’re showing anything confidential), and video release forms (letting people know you’re recording them for research purposes). You can put all of this into one form so the user isn’t overwhelmed with things to sign; usability.gov actually has a <a href="https://www.usability.gov/how-to-and-tools/resources/templates/consent-recording-release-form-adult.html">really nice template</a> you can adapt.</p>
 
-  <div class="row" role="group" aria-label="Basic example">
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/" target="_self">&lt; Usability Research Checklist</a>
-    </div>
-    <div class="col"></div>
-    <div class="col">
-      <a role="button" class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/ux-checklist/design-study/" target="_self">Design the Study &gt;</a>
-    </div>
-  </div>
+  {{ prevNext.buttons(
+    "/ux-checklist/",
+    "Usability Research Checklist",
+    "/ux-checklist/design-study/",
+    "Design the Study") }}
 
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {
