@@ -5,7 +5,7 @@
 {% block content %}
   <a href="https://www.pexels.com/photo/time-lapse-photography-of-people-walking-on-pedestrian-lane-842339/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Recruit Participants</h1>
-  <h5 class="mb-3">Often the hardest part; you need real, unbiased people to test the product.</h3>
+  <h5 class="mb-3">Often the hardest part; you need real, unbiased people to test the product.</h5>
 
   {{ figure.insertShare("/img/blog/ux-checklist/4-recruit.jpg", "View Full Size", "/img/blog/ux-checklist/4-recruit.jpg", "https://melioralabs.com/ux-checklist/recruit-participants/") }}
 

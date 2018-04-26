@@ -5,7 +5,7 @@
 {% block content %}
   <a href="https://www.pexels.com/photo/man-wearing-black-and-white-stripe-shirt-looking-at-white-printer-papers-on-the-wall-212286/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Analyze Results</h1>
-  <h5 class="mb-3">Data is just data at the end of the day. It needs analysis to bring it to life.</h3>
+  <h5 class="mb-3">Data is just data at the end of the day. It needs analysis to bring it to life.</h5>
 
   {{ figure.insertShare("/img/blog/ux-checklist/6-analyze.jpg", "View Full Size", "/img/blog/ux-checklist/6-analyze.jpg", "https://melioralabs.com/ux-checklist/analyze-results/") }}
 

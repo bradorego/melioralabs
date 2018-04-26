@@ -5,7 +5,7 @@
 {% block content %}
   <a href="https://www.pexels.com/photo/macbook-air-apple-pen-notes-7377/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Prepare the Study</h1>
-  <h5 class="mb-3">Make sure you have everything you need for sessions to run smoothly.</h3>
+  <h5 class="mb-3">Make sure you have everything you need for sessions to run smoothly.</h5>
 
   {{ figure.insertShare("/img/blog/ux-checklist/3-prepare.jpg", "View Full Size", "/img/blog/ux-checklist/3-prepare.jpg", "https://melioralabs.com/ux-checklist/prepare-study/") }}
 

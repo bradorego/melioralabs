@@ -5,7 +5,7 @@
 {% block content %}
   <a href="https://www.pexels.com/photo/top-view-photography-of-smartphones-and-papers-on-white-surface-926987/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Gather Resources</h1>
-  <h5 class="mb-3">Make sure you have everything you need to get started, including people resources, paperwork, and facilities.</h3>
+  <h5 class="mb-3">Make sure you have everything you need to get started, including people resources, paperwork, and facilities.</h5>
 
   {{ figure.insertShare("/img/blog/ux-checklist/1-gather.jpg", "View Full Size", "/img/blog/ux-checklist/1-gather.jpg", "https://melioralabs.com/ux-checklist/gather-resources/") }}
 

@@ -5,7 +5,7 @@
 {% block content %}
   <a href="https://www.pexels.com/photo/schedule-planning-startup-launching-7376/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Design the Study</h1>
-  <h5 class="mb-3">Figure out what to test, how to test it, and with whom.</h3>
+  <h5 class="mb-3">Figure out what to test, how to test it, and with whom.</h5>
 
   {{ figure.insertShare("/img/blog/ux-checklist/2-design.jpg", "View Full Size", "/img/blog/ux-checklist/2-design.jpg", "https://melioralabs.com/ux-checklist/design-study/") }}
 

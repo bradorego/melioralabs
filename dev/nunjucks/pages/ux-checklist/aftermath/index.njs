@@ -5,7 +5,7 @@
 {% block content %}
   <a href="https://www.pexels.com/photo/background-beverage-breakfast-brown-414645/" class="photo-credit">Photo Credit</a>
   <h1 class="my-0">Aftermath</h1>
-  <h5 class="mb-3">How to reflect on your work and prepare it for presentation.</h3>
+  <h5 class="mb-3">How to reflect on your work and prepare it for presentation.</h5>
 
   {{ figure.insertShare("/img/blog/ux-checklist/7-aftermath.jpg", "View Full Size", "/img/blog/ux-checklist/7-aftermath.jpg", "https://melioralabs.com/ux-checklist/aftermath/") }}
 
