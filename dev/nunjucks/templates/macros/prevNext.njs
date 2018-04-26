@@ -1,5 +1,5 @@
 {% macro buttons() %}
-
+  <hr/><p>Keep an eye on your inbox for the next entry in this series!</p>
 {% endmacro %}
 
 {% macro buttons2(prevUrl, prevText, nextUrl, nextText) %}
