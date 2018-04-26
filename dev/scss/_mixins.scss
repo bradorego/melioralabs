@@ -16,12 +16,12 @@
 
 // Font Mixins
 @mixin body-font {
-  font-family: 'Source Sans Pro';
+  font-family: 'Roboto';
   font-weight: 300;
   line-height: 1.4;
 }
 @mixin heading-font {
-  font-family: 'Merriweather';
+  // font-family: 'Roboto';
   font-weight: 700;
   line-height: 1.2;
 }
