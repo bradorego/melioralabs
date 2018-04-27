@@ -38,3 +38,36 @@ body {
     border-bottom-left-radius: 0;
   }
 }
+
+blockquote {
+  padding: 1rem;
+  margin: 0;
+  background: rgba(0,0,0,0.3);
+}
+
+//// bootstrap overrides?
+.btn-secondary {
+  background-color: $secondary;
+  border-color: $secondary;
+  color: white;
+  // &:active,
+  // &:focus,
+  // &:hover {
+  //   background-color: darken($secondary, 10%) !important;
+  //   border-color: darken($secondary, 10%) !important;
+  // }
+}
+
+.input {
+  font-weight: 300 !important;
+}
+
+// small {
+//   font-weight: 100;
+// }
+
+// .form-check-input {
+//   margin-left: 0;
+// }
+
+
