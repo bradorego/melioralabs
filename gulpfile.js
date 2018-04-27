@@ -181,9 +181,11 @@ gulp.task('build', () => {
   runSequence('prebuild', 'clean', 'minifyHTML', 'copy-img', 'copy-css', 'copy-js', 'copy-vendor', 'copy-video', 'copy-font' )
   gulp.src(`${DEV_ROOT}/robots.txt`)
     .pipe(gulp.dest(PROD_ROOT));
+  gulp.src(`${DEV_ROOT}/.htaccess`)
+    .pipe(gulp.dest(PROD_ROOT));
   gulp.src(`${DEV_ROOT}/portfolio/**`, {
-    dot: true
-  })
+      dot: true
+    })
     .pipe(gulp.dest(`${PROD_ROOT}/portfolio`));
   return gulp.src(`${DEV_ROOT}/favicon.ico`)
     .pipe(gulp.dest(PROD_ROOT));
