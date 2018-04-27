@@ -1,6 +1,7 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
 {% import "macros/prevNext.njs" as prevNext %}
+{% import "macros/changeBg.njs" as bg %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/man-wearing-black-and-white-stripe-shirt-looking-at-white-printer-papers-on-the-wall-212286/" class="photo-credit">Photo Credit</a>
@@ -21,10 +22,7 @@
     "/ux-checklist/aftermath/",
     "Aftermath") }}
 
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.style.backgroundImage = "url('/img/blog/ux-checklist/analyze.jpg')";
-    });
-  </script>
+  {{ bg.change('/img/blog/ux-checklist/analyze.jpg') }}
+
 {% endblock %}
 

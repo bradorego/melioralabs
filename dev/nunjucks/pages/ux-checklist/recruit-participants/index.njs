@@ -1,6 +1,7 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
 {% import "macros/prevNext.njs" as prevNext %}
+{% import "macros/changeBg.njs" as bg %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/time-lapse-photography-of-people-walking-on-pedestrian-lane-842339/" class="photo-credit">Photo Credit</a>
@@ -23,10 +24,7 @@
     "/ux-checklist/run-study/",
     "Run Study Sessions") }}
 
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.style.backgroundImage = "url('/img/blog/ux-checklist/participants.jpg')";
-    });
-  </script>
+  {{ bg.change('/img/blog/ux-checklist/participants.jpg') }}
+
 {% endblock %}
 

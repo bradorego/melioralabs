@@ -1,6 +1,7 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
 {% import "macros/prevNext.njs" as prevNext %}
+{% import "macros/changeBg.njs" as bg %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/computer-desk-electronics-indoors-374074/" class="photo-credit">Photo Credit</a>
@@ -25,10 +26,6 @@
     "/ux-checklist/analyze-results/",
     "Analyze Results") }}
 
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.style.backgroundImage = "url('/img/blog/ux-checklist/run.jpg')";
-    });
-  </script>
+  {{ bg.change('/img/blog/ux-checklist/run.jpg') }}
 {% endblock %}
 

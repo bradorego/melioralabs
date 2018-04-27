@@ -1,6 +1,7 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
 {% import "macros/prevNext.njs" as prevNext %}
+{% import "macros/changeBg.njs" as bg %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/top-view-photography-of-smartphones-and-papers-on-white-surface-926987/" class="photo-credit">Photo Credit</a>
@@ -23,10 +24,7 @@
     "/ux-checklist/design-study/",
     "Design the Study") }}
 
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.style.backgroundImage = "url('/img/blog/ux-checklist/resources.jpg')";
-    });
-  </script>
+  {{ bg.change('/img/blog/ux-checklist/resources.jpg') }}
+
 {% endblock %}
 

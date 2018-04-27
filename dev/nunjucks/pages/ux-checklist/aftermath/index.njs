@@ -1,6 +1,7 @@
 {% extends "layout.njs" %}
 {% import "macros/figure.njs" as figure %}
 {% import "macros/prevNext.njs" as prevNext %}
+{% import "macros/changeBg.njs" as bg %}
 
 {% block content %}
   <a href="https://www.pexels.com/photo/background-beverage-breakfast-brown-414645/" class="photo-credit">Photo Credit</a>
@@ -27,10 +28,6 @@
   <p>Now that you know how to successfully design and run a usability session, check out how MelioraLabs can help you achieve your research goals.</p>
   <a role="button" class="mt-5 btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/" target="_self">Get Started with MelioraLabs</a>
 
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-      document.body.style.backgroundImage = "url('/img/blog/ux-checklist/report.jpg')";
-    });
-  </script>
+  {{ bg.change('/img/blog/ux-checklist/report.jpg') }}
 {% endblock %}
 
