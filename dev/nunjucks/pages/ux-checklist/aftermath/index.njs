@@ -17,15 +17,15 @@
   <p>Be mindful of who you're presenting to and what information is relevant to them. Product teams are going to want a lot more detail than executives will. Providing a high-level summary (e.g. how many participants were run, what the findings were, what suggestions are being made) as well as specifics (success rates, average time per task, etc.) is important. You can even offer to let everyone see the raw footage, though in our 7 years of business we've yet to see one client take us up on that offer.</p>
 
   <p>A fringe benefit to doing research like this is the opportunity to publicize your findings. If you’re studying something that can be generalized, doing so in a whitepaper or a blog post can help the community and start to make a name for the brand as one that cares about users. If nothing else, letting your current users/customers know that you’re working to make the product better should earn some brownie points and can make subsequent recruitment efforts easier (especially if you need to test users familiar with the product/brand).</p>
-
+{#
   {{ prevNext.buttons(
     "/ux-checklist/analyze-results/",
     "Analyze Results",
     "/",
     "Get Started with MelioraLabs") }}
-
+#}
   <hr />
-  <p>Now that you know how to successfully design and run a usability session, check out how MelioraLabs can help you achieve your research goals.</p>
+  <p>Now that you know how to successfully design and run a usability session, you may be thinking: "wow, that's a lot to tackle". Thankfully, MelioraLabs can help you achieve your research goals, whether that's providing a space and taking recruitment off your hands or completely offloading the process.</p>
   <a role="button" class="mt-5 btn btn-lg btn-block btn-secondary mt-3 mp-track-click" href="/" target="_self">Get Started with MelioraLabs</a>
 
   {{ bg.change('/img/blog/ux-checklist/report.jpg') }}
