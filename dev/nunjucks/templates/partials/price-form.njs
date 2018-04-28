@@ -37,3 +37,7 @@
   <button class="btn btn-lg btn-block btn-secondary mt-3 mp-track-click" data-mp-value="pricing-submit" id="ml-submit">Get Started</button>
   <div class="success"></div>
 </div>
+<blockquote class="mt-3">
+  <h5>Need extra help?</h5>
+  Check out the <a href="https://melioralabs.fws.store/">online store</a> where you can get our Usability Research Checklist or schedule a consultation.
+</blockquote>
